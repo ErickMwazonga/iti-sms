@@ -116,6 +116,6 @@ LOGIN_REDIRECT_URL = '/messages/0'
 # LOGOUT_URL = '/logout/'
 
 try:
-    from sms_app.local_settings import *
+    from sms_app.locla_settings import *
 except ImportError:
     pass
