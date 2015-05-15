@@ -83,20 +83,20 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/var/www/sms_app/static/'
+STATIC_ROOT = '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/static/'
 
 STATICFILES_DIRS = (
-    '/var/www/sms_app/send_sms/static/css/',
-    '/var/www/sms_app/send_sms/static/img/',
-    '/var/www/sms_app/send_sms/static/js/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/static/css/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/static/img/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/static/js/',
 )
 
 
 #Templates
 TEMPLATE_DIRS =(
     [os.path.join(BASE_DIR, 'templates')],
-    '/var/www/sms_app/sms_app/templates/',
-    '/var/www/sms_app/send_sms/templates/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/sms_app/templates/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/templates/',
 )
 
 #Login/Logout
