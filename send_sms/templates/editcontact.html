@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+<!-- THIS IS FOR SUCCESS MESSAGES -->
+{% if messages %}
+<div class="alert alert-success">
+	<div class="container">
+    	{% for message in messages %}
+    		{{ message }}
+   		{% endfor %}
+   	</div>	
+</div>
+{% endif %}
+<!-- END THIS IS FOR SUCCESS MESSAGES -->
+
+{% block content %}
+    <h3>Ajouter des contacts</h3>
+     <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+    	<input type="submit" value="Ajtr Contact" class="btn btn-primary" />
+    	<input type="reset"  value="Effacer" class="btn btn-danger" />
+    </form>
+{% endblock %}

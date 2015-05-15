@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+<!-- THIS IS FOR SUCCESS MESSAGES -->
+{% if messages %}
+<div class="alert alert-success">
+	<div class="container">
+    	{% for message in messages %}
+    		{{ message }}
+   		{% endfor %}
+   	</div>	
+</div>
+{% endif %}
+<!-- END THIS IS FOR SUCCESS MESSAGES -->
+
+{% block content %}
+    <h3>Mes Contacts</h3>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+        <tr>
+            <th colspan="3">Liste des contacts</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for c in contacts_pag %}
+            <tr>
+                <td>{{ c.firstName }} {{ c.lastName }}</td>
+                <td>{{ c.phoneNumber }}</td>
+                <td><a href="/contacts/edit/{{c.phoneNumber}}" >Edit</a>/<a href="/contacts/delete/{{c.phoneNumber}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagination_messages">
+    <ul class="pagination ct-blue">
+        {% if active > 0 %} 
+        <li><a href="/contacts/{{active|add:'-1'}}">&laquo;</a></li>
+        {% endif %}
+        {% for p in pages %}
+            {% if active == p %}
+                <li class="active"><a href="/contacts/{{p}}">{{p|add:"1"}}</a></li>
+            {% else %}
+                <li><a href="/contacts/{{p}}">{{p|add:"1"}}</a></li>
+            {% endif %}
+        {% endfor %}
+        {% if active < pages|length|add:'-1' %}
+        <li><a href="/contacts/{{active|add:'1'}}">&raquo;</a></li>
+        {% endif %}
+       
+    </ul>
+</div>
+    <h3>Ajouter des contacts</h3>
+     <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+    	<input type="submit" value="Ajtr Contact" class="btn btn-primary" />
+    	<input type="reset"  value="Effacer" class="btn btn-danger" />
+    </form>
+    <h3>Groupes des contacts</h3>
+    <table class="table table-bordered table-hover">
+        <thead>
+        	<tr>
+           	 <th>Mes Groupes</th>
+             <th>Membres</th>
+        	</tr>
+        </thead>
+        <tbody>
+        {% for cg in contact_group %}
+            <tr>
+                <td>{{ cg.groupName }}</td>
+                <td>{% for name in cg.contact.all %}{{name.firstName}} {{name.lastName}}, {% endfor %}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ groupForm.as_p }}
+        <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+          Contacts
+          <span class="caret"></span>
+        </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            {% for contact in contact_list %}
+              <li role="presentation">
+                <input type="checkbox" id="c_chooser" name="checks[]" value="{{contact.phoneNumber}}">
+                <label for="c_chooser" >{{contact.firstName}} {{contact.lastName}}</label>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary" />
+        <input type="reset" value="Effacer" class="btn btn-danger" />
+    </form>
+{% endblock %}
