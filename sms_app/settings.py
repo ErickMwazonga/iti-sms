@@ -20,12 +20,22 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'qfx42u61@@i^s@j^1n%^-^^*8&$(00sa4j)1b@wpavb&nj4d@@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'itisms',
+        'USER': 'root',
+        'PASSWORD': 'r33b00ts',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+    }
+}
 
 # Application definition
 
@@ -57,12 +67,12 @@ WSGI_APPLICATION = 'sms_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -104,3 +114,8 @@ LOGIN_URL = '/'
 LOGIN_REDIRECT_URL = '/messages/0'
 
 # LOGOUT_URL = '/logout/'
+
+try:
+    from sms_app.local_settings import *
+except ImportError:
+    pass
