@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="073a501b-af85-441a-bef0-cc98ea5a032e" name="Default" comment="Allowed Hosts = tahiti-sms.com">
+    <list default="true" id="073a501b-af85-441a-bef0-cc98ea5a032e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sms_app/settings.py" afterPath="$PROJECT_DIR$/sms_app/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -42,8 +42,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sms_app/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18256131" vertical-offset="1328" max-vertical-offset="1890">
-              <caret line="93" column="28" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.14168938" vertical-offset="1328" max-vertical-offset="1890">
+              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="93" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -530,7 +530,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431734897307</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="&#10;STATIC_URL = '/static/static'">
+      <created>1431736039776</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1431736039776</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -623,7 +629,8 @@
     <MESSAGE value="debug = False" />
     <MESSAGE value="debug = True" />
     <MESSAGE value="Allowed Hosts = tahiti-sms.com" />
-    <option name="LAST_COMMIT_MESSAGE" value="Allowed Hosts = tahiti-sms.com" />
+    <MESSAGE value="&#10;STATIC_URL = '/static/static'" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;STATIC_URL = '/static/static'" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1027,8 +1034,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sms_app/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18256131" vertical-offset="1328" max-vertical-offset="1890">
-          <caret line="93" column="28" selection-start-line="93" selection-start-column="28" selection-end-line="93" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.14168938" vertical-offset="1328" max-vertical-offset="1890">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="93" selection-end-column="23" />
           <folding />
         </state>
       </provider>
