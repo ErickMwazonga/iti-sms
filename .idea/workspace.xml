@@ -42,8 +42,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sms_app/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28610355" vertical-offset="225" max-vertical-offset="1890">
-              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.44959128" vertical-offset="225" max-vertical-offset="1890">
+              <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -486,7 +486,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431734627227</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="debug = True">
+      <created>1431734706690</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1431734706690</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -577,7 +583,8 @@
     <MESSAGE value="edit settings and add local setting redirect" />
     <MESSAGE value="debug = true" />
     <MESSAGE value="debug = False" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug = False" />
+    <MESSAGE value="debug = True" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug = True" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -980,8 +987,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sms_app/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28610355" vertical-offset="225" max-vertical-offset="1890">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.44959128" vertical-offset="225" max-vertical-offset="1890">
+          <caret line="26" column="18" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
           <folding />
         </state>
       </provider>
