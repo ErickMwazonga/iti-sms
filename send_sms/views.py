@@ -87,11 +87,11 @@ def viewContact(request, page):
         messages.success(request, 'Contact Saved')
         return HttpResponseRedirect('')
 
-    contact_group = contactgroup.objects.all()
+    contact_group = contactgroup.objects.filter(user=request.user)
     groupForm = AddContactToGroupForm(request.POST or None)
     if groupForm.is_valid():
-        #save_form = groupForm.save(commit=False)
         cg = contactgroup()
+        cg.user = request.user
         cg.groupName = groupForm.cleaned_data['groupName']
         checklist = request.POST.getlist('checks[]')
         cg.save()

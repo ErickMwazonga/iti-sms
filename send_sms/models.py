@@ -26,6 +26,7 @@ class device(models.Model):
 
 
 class contactgroup(models.Model):
+    user = models.ForeignKey(User)
     groupName = models.CharField("Nom du Groupe", max_length=20)
     contact = models.ManyToManyField(contacts)
 
