@@ -27,7 +27,7 @@ class device(models.Model):
 
 class contactgroup(models.Model):
     user = models.ForeignKey(User)
-    groupName = models.CharField("Nom du Groupe", max_length=20)
+    groupName = models.CharField("Nom du Groupe", max_length=50)
     contact = models.ManyToManyField(contacts)
 
     def __unicode__(self):
