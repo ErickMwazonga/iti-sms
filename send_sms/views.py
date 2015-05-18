@@ -84,7 +84,7 @@ def viewContact(request, page):
         save_it = form.save(commit=False)
         save_it.user = request.user
         save_it.save()
-        # messages.success(request, 'Message Envoy&eacute;') <--TODO
+        messages.success(request, 'Contact Saved')
         return HttpResponseRedirect('')
 
     contact_group = contactgroup.objects.all()
@@ -133,6 +133,7 @@ def deleteContact(request, num):
 
 @login_required
 def createTemplate(request):
+    template = msgTemplates.objects.filter(user=request.user)
     form = createTemplateForm(request.POST or None)
     if form.is_valid():
         save_it = form.save(commit=False)
@@ -140,3 +141,20 @@ def createTemplate(request):
         save_it.save()
         return redirect('/send-sms/')
     return render_to_response('createtemplate.html', locals(), context_instance=RequestContext(request))
+
+@login_required
+def editTemplate(request, templateID):
+    template = msgTemplates.objects.filter(user=request.user).get(id=templateID)
+    form = createTemplateForm(request.POST or None, instance=template)
+    if form.is_valid():
+        save_it = form.save(commit=False)
+        save_it.user = request.user
+        save_it.save()
+        return redirect('/template/')
+    return render_to_response('edittemplate.html', locals(), context_instance=RequestContext(request))
+
+@login_required
+def deleteTemplate(request, templateID):
+    template = msgTemplates.objects.filter(user=request.user).get(id=templateID)
+    template.delete()
+    return redirect('/template/')

@@ -35,8 +35,8 @@ class contactgroup(models.Model):
 
 class msgTemplates(models.Model):
     user = models.ForeignKey(User)
-    name = models.CharField(max_length=20)
-    msgText = models.CharField(max_length=160)
+    name = models.CharField("Le Nom du Template", max_length=20)
+    msgText = models.CharField("Modeles de Texte", max_length=160)
 
     def __unicode__(self):
         return self.name

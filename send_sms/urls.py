@@ -11,4 +11,6 @@ urlpatterns = patterns('',
     url(r'^contacts/delete/(?P<num>[0-9]+)$', 'send_sms.views.deleteContact', name='DeleteContact'),
     # url(r'^analytics/$', 'send_sms.views.viewAnalytics', name='Analytics'), TODO
     url(r'^template/$', 'send_sms.views.createTemplate', name='CreateTemplate'),
+    url(r'^template/(?P<templateID>[0-9]+)$', 'send_sms.views.editTemplate', name='EditTemplate'),
+    url(r'^template/delete/(?P<templateID>[0-9]+)$', 'send_sms.views.deleteTemplate', name='DeleteTemplate'),
 )

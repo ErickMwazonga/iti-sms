@@ -40,12 +40,17 @@
                     <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                        <label>Templates</label>
                         {% for template in template_list %}
                             <li role="presentation">
-                                <a href="#" class="list-group-item" onclick="addtemplate('{{template.msgText}}')"
+                                <a href="#"  onclick="addtemplate('{{template.msgText}}')"
                                 value="{{template.msgText}}" >{{template.name}}</a>
                             </li>
                         {% endfor %}
+                        <label>Create</label>
+                        <li role="presentation">
+                            <a href="/template/" class="list-group-item">Create A Template</a>
+                        </li>
                     </ul>
                 </div>
             </div>
