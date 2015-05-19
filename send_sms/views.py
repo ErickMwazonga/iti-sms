@@ -26,7 +26,7 @@ def sendSMS(request):
     form = SendMsgForm(request.POST or None)
     if form.is_valid():
         number = form.cleaned_data['phoneNumber']
-        number_list = number.split(",")
+        number_list = number.split(", ")
         message = form.cleaned_data['message']
         deviceID = request.POST.get('deviceID')
         device_obj = device.objects.all()
@@ -54,6 +54,7 @@ def sendSMS(request):
 @login_required
 def getMessages(request, page):
     device_obj = device.objects.filter(user=request.user)
+    contact_obj = contacts.objects.filter(user=request.user)
     msgs = []
     for d_obj in device_obj:
         accountEmail = d_obj.accountEmail
@@ -158,3 +159,17 @@ def deleteTemplate(request, templateID):
     template = msgTemplates.objects.filter(user=request.user).get(id=templateID)
     template.delete()
     return redirect('/template/')
+
+# @login_required
+# def sandbox(request):
+#     device_obj = device.objects.filter(user=request.user)
+#     for d_obj in device_obj:
+#         accountEmail = d_obj.accountEmail
+#         accountPassword = d_obj.accountPassword
+#         gateway = SmsGateway()
+#         gateway.loginDetails(accountEmail, accountPassword)
+#         json_string = str(gateway.getMessages())
+#         json_string_quotes = json_string.replace("'", '"')
+#         json_sting_uni = json_string_quotes.replace("u\"", "\"")
+#         json_string_valid = json_sting_uni.replace("True", "\"TRUE\"")
+#     return HttpResponse(json_string_valid)

@@ -3,7 +3,7 @@
 {% load timetags %}
 <!-- THIS IS FOR SUCCESS MESSAGES -->
 {% if messages %}
-<div class="alert alert-success">
+<div class="alert alert-success" xmlns="http://www.w3.org/1999/html">
 	<div class="container">
     	{% for message in messages %}
     		{{ message }}
@@ -30,9 +30,15 @@
                 <td>{{ msg.status }}</td>
                 <td>{{ msg.sent_at|print_timestamp }}</td>
             	<td>{{ msg.received_at|print_timestamp }}</td>
-                <td>{{ msg.contact_number }}</td>
+                <td>{% for c_obj in contact_obj %}
+                    {% if msg.contact_number == c_obj.phoneNumber %}
+                        {{ c_obj.firstName }} {{ c_obj.lastName }} -
+                    {% endif %}
+                {% endfor %}
+                {{ msg.contact_number }}</td>
                 <td>{{ msg.message }}</td>
-            </tr>{% endfor %}
+            </tr>
+    {% endfor %}
         </tbody>
     </table>
     <div class="pagination_messages">
