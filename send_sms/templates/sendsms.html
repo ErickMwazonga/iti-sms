@@ -9,18 +9,20 @@
                 <input type="text" class="form-control" id="id_phoneNumber" name="phoneNumber">
                 <div class="input-group-btn">
                     <button class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                    Contacts
-                    <span class="caret"></span>
+                        Contacts<span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <label>Contacts</label>
                         {% for contact in contact_list %}
                             <li role="presentation">
                                 <a href="#" class="list-group-item" onclick="addcontact({{contact.phoneNumber}})"
                                 value="{{contact.phoneNumber}}" >{{contact.firstName}} {{contact.lastName}}</a>
                             </li>
                         {% endfor %}
-                        <label>Groupes</label>
+                    </ul>
+                    <button class="btn btn-default dropdown-toggle" id="dropdownMenu3" data-toggle="dropdown" aria-expanded="true">
+                        Groupe<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu3">
                         {% for group in group_list %}
                             <li role="presentation">
                                 <a href="#" class="list-group-item" onclick="addgroup('{{group.contact.all}}')">
@@ -47,9 +49,9 @@
                                 value="{{template.msgText}}" >{{template.name}}</a>
                             </li>
                         {% endfor %}
-                        <label>Create</label>
+                        <label>Creer un Nouveau</label>
                         <li role="presentation">
-                            <a href="/template/" class="list-group-item">Create A Template</a>
+                            <a href="/template/" class="list-group-item">Creer un Template</a>
                         </li>
                     </ul>
                 </div>
