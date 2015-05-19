@@ -9,7 +9,8 @@
                 <input type="text" class="form-control" id="id_phoneNumber" name="phoneNumber">
                 <div class="input-group-btn">
                     <button class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                        Contacts<span class="caret"></span>
+                    Contacts
+                    <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
                         {% for contact in contact_list %}
@@ -19,8 +20,11 @@
                             </li>
                         {% endfor %}
                     </ul>
+                </div>
+                <div class="input-group-btn">
                     <button class="btn btn-default dropdown-toggle" id="dropdownMenu3" data-toggle="dropdown" aria-expanded="true">
-                        Groupe<span class="caret"></span>
+                    Groupes
+                    <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu3">
                         {% for group in group_list %}
