@@ -29,7 +29,13 @@
     </div>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#example-getting-started').multiselect();
+            $('#example-getting-started').multiselect({
+                disableIfEmpty: true,
+                maxHeight: 200,
+                onDropdownHide: function(event){
+                    addcontact({{contact.phoneNumber}})
+                }
+            });
         });
     </script>
 {% endblock %}
