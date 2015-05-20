@@ -9,8 +9,7 @@
                 <input type="text" class="form-control" id="id_phoneNumber" name="phoneNumber">
                     <select id="example-getting-started" multiple="multiple">
                         {% for c_obj in contact_list %}
-                            <option value="{{ c_obj.phoneNumber }}"><a href="#" class="list-group-item" onclick="addcontact({{contact.phoneNumber}})"
-                                value="{{contact.phoneNumber}}" >{{contact.firstName}} {{contact.lastName}}</a></option>
+                            <option value="{{ c_obj.phoneNumber }}">{{ c_obj.firstName }} {{ c_obj.lastName }}</option>
                         {% endfor %}
                 <p>{{ form.message.label }}</p>
                 <textarea type="text" class="form-control" id="id_message" name="message" rows="10"></textarea>
