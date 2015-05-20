@@ -26,7 +26,7 @@ def sendSMS(request):
     form = SendMsgForm(request.POST or None)
     if form.is_valid():
         number = form.cleaned_data['phoneNumber']
-        number_list = number.split(",")
+        number_list = number.split(", ")
         message = form.cleaned_data['message']
         deviceID = request.POST.get('deviceID')
         device_obj = device.objects.all()
@@ -54,6 +54,7 @@ def sendSMS(request):
 @login_required
 def getMessages(request, page):
     device_obj = device.objects.filter(user=request.user)
+    contact_obj = contacts.objects.filter(user=request.user)
     msgs = []
     for d_obj in device_obj:
         accountEmail = d_obj.accountEmail
@@ -84,14 +85,14 @@ def viewContact(request, page):
         save_it = form.save(commit=False)
         save_it.user = request.user
         save_it.save()
-        # messages.success(request, 'Message Envoy&eacute;') <--TODO
+        messages.success(request, 'Contact Saved')
         return HttpResponseRedirect('')
 
-    contact_group = contactgroup.objects.all()
+    contact_group = contactgroup.objects.filter(user=request.user)
     groupForm = AddContactToGroupForm(request.POST or None)
     if groupForm.is_valid():
-        #save_form = groupForm.save(commit=False)
         cg = contactgroup()
+        cg.user = request.user
         cg.groupName = groupForm.cleaned_data['groupName']
         checklist = request.POST.getlist('checks[]')
         cg.save()
@@ -133,6 +134,7 @@ def deleteContact(request, num):
 
 @login_required
 def createTemplate(request):
+    template = msgTemplates.objects.filter(user=request.user)
     form = createTemplateForm(request.POST or None)
     if form.is_valid():
         save_it = form.save(commit=False)
@@ -140,3 +142,51 @@ def createTemplate(request):
         save_it.save()
         return redirect('/send-sms/')
     return render_to_response('createtemplate.html', locals(), context_instance=RequestContext(request))
+
+@login_required
+def editTemplate(request, templateID):
+    template = msgTemplates.objects.filter(user=request.user).get(id=templateID)
+    form = createTemplateForm(request.POST or None, instance=template)
+    if form.is_valid():
+        save_it = form.save(commit=False)
+        save_it.user = request.user
+        save_it.save()
+        return redirect('/template/')
+    return render_to_response('edittemplate.html', locals(), context_instance=RequestContext(request))
+
+@login_required
+def deleteTemplate(request, templateID):
+    template = msgTemplates.objects.filter(user=request.user).get(id=templateID)
+    template.delete()
+    return redirect('/template/')
+
+@login_required
+def sandbox(request):
+    form = SendMsgForm(request.POST or None)
+    if form.is_valid():
+        number = form.cleaned_data['phoneNumber']
+        selected_contacts = request.POST.getlist['contacts']
+        number_list = number.split(", ")
+        number_list.append(selected_contacts)
+        message = form.cleaned_data['message']
+        deviceID = request.POST.get('deviceID')
+        device_obj = device.objects.all()
+        for d_obj in device_obj:
+            if d_obj.user == request.user:
+                for num in number_list:
+                    accountEmail = d_obj.accountEmail
+                    accountPassword = d_obj.accountPassword
+                    gateway = SmsGateway()
+                    gateway.loginDetails(accountEmail, accountPassword)
+                    gateway.sendMessageToNumber(num, message, deviceID)
+        messages.success(request, 'Message Envoye')
+        return redirect('/messages/0')
+    username = request.user.username
+    device_obj = device.objects.all()
+    contact_list = contacts.objects.filter(user=request.user)
+    group_list = contactgroup.objects.filter(contact__user=request.user).distinct()
+    template_list = msgTemplates.objects.filter(user=request.user).distinct()
+    context = {"form": form}
+    template = "sendsms2.html"
+    pg = ['active', '', '']
+    return render_to_response(template, locals(), context_instance=RequestContext(request))

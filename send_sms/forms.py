@@ -22,7 +22,7 @@ class AddContactForm(forms.ModelForm):
 class AddContactToGroupForm(forms.ModelForm):
     class Meta:
         model = contactgroup
-        exclude = ['contact']
+        exclude = ['contact', 'user']
 
     def __init__(self, *args, **kwargs):
         super(AddContactToGroupForm, self).__init__(*args, **kwargs)

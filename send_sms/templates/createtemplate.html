@@ -3,7 +3,21 @@
     <form method="POST" action="">
         {% csrf_token %}
         {{ form.as_p }}
-    	<input type="submit" value="Ajtr Contact" class="btn btn-primary" />
+    	<input type="submit" value="Sauvez" class="btn btn-primary" />
     	<input type="reset"  value="Effacer" class="btn btn-danger" />
     </form>
+    <br />
+    <br />
+    <table class="table table-bordered table-hover table-striped">
+        <tr>
+            <th>Nom</th>
+            <th>Editer/Effacer</th>
+        </tr>
+        {% for t_obj in template  %}
+            <tr>
+                <td>{{ t_obj.name }}</td>
+                <td><a href="/template/{{ t_obj.id }}">Editer</a>/<a href="/template/delete/{{ t_obj.id }}">Effacer</a></td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

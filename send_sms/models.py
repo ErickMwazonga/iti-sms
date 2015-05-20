@@ -26,7 +26,8 @@ class device(models.Model):
 
 
 class contactgroup(models.Model):
-    groupName = models.CharField("Nom du Groupe", max_length=20)
+    user = models.ForeignKey(User)
+    groupName = models.CharField("Nom du Groupe", max_length=50)
     contact = models.ManyToManyField(contacts)
 
     def __unicode__(self):
@@ -35,8 +36,8 @@ class contactgroup(models.Model):
 
 class msgTemplates(models.Model):
     user = models.ForeignKey(User)
-    name = models.CharField(max_length=20)
-    msgText = models.CharField(max_length=160)
+    name = models.CharField("Le Nom du Template", max_length=20)
+    msgText = models.CharField("Modeles de Texte", max_length=160)
 
     def __unicode__(self):
         return self.name

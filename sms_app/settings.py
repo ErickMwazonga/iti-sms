@@ -20,12 +20,22 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'qfx42u61@@i^s@j^1n%^-^^*8&$(00sa4j)1b@wpavb&nj4d@@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.tahiti-sms.com']
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'itisms',
+        'USER': 'root',
+        'PASSWORD': 'r33b00ts',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+    }
+}
 
 # Application definition
 
@@ -57,12 +67,12 @@ WSGI_APPLICATION = 'sms_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -83,20 +93,20 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/var/www/sms_app/static/'
+STATIC_ROOT = '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/static/'
 
 STATICFILES_DIRS = (
-    '/var/www/sms_app/send_sms/static/css/',
-    '/var/www/sms_app/send_sms/static/img/',
-    '/var/www/sms_app/send_sms/static/js/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/static/css/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/static/img/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/static/js/',
 )
 
 
 #Templates
 TEMPLATE_DIRS =(
     [os.path.join(BASE_DIR, 'templates')],
-    '/var/www/sms_app/sms_app/templates/',
-    '/var/www/sms_app/send_sms/templates/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/sms_app/templates/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/templates/',
 )
 
 #Login/Logout
@@ -104,3 +114,8 @@ LOGIN_URL = '/'
 LOGIN_REDIRECT_URL = '/messages/0'
 
 # LOGOUT_URL = '/logout/'
+
+try:
+    from sms_app.locla_settings import *
+except ImportError:
+    pass
