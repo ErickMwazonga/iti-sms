@@ -33,9 +33,14 @@
                 nonSelectedText: 'Add Contacts',
                 disableIfEmpty: true,
                 maxHeight: 200,
-                onDropdownHidden: function(event) {
-                alert('Dropdown closed.');
-            }
+                onDropdownHidden: addcontact = function(num) {
+                if ($('#id_phoneNumber').val() != ''){
+                    $('#id_phoneNumber').val($('#id_phoneNumber').val() + ", " + num);
+                }
+                else{
+                    $('#id_phoneNumber').val(num);
+	}
+}
             });
         });
     </script>
