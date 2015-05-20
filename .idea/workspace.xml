@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="073a501b-af85-441a-bef0-cc98ea5a032e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/send_sms/templates/sendsms2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/urls.py" afterPath="$PROJECT_DIR$/send_sms/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/views.py" afterPath="$PROJECT_DIR$/send_sms/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/templates/header.html" afterPath="$PROJECT_DIR$/send_sms/templates/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sms_app.iws" />
@@ -53,11 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sendsms2.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sendsms2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.95614034" vertical-offset="183" max-vertical-offset="600">
+            <state vertical-scroll-proportion="-13.625" vertical-offset="183" max-vertical-offset="600">
               <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/send_sms/templates/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7368421" vertical-offset="123" max-vertical-offset="630">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -140,7 +148,6 @@
         <option value="$PROJECT_DIR$/send_sms/templates/footer.html" />
         <option value="$PROJECT_DIR$/static/js/custom.js" />
         <option value="$PROJECT_DIR$/sms_app/locla_settings.py" />
-        <option value="$PROJECT_DIR$/send_sms/templates/header.html" />
         <option value="$PROJECT_DIR$/send_sms/templates/nav.html" />
         <option value="$PROJECT_DIR$/send_sms/templates/editcontact.html" />
         <option value="$PROJECT_DIR$/send_sms/templates/edittemplate.html" />
@@ -158,6 +165,7 @@
         <option value="$PROJECT_DIR$/send_sms/urls.py" />
         <option value="$PROJECT_DIR$/send_sms/views.py" />
         <option value="$PROJECT_DIR$/send_sms/templates/sendsms2.html" />
+        <option value="$PROJECT_DIR$/send_sms/templates/header.html" />
       </list>
     </option>
   </component>
@@ -649,7 +657,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432078676766</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="sandbox">
+      <created>1432085405519</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1432085405519</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -752,7 +766,8 @@
     <MESSAGE value="fix dropdowns" />
     <MESSAGE value="Edit to MSG table, displaying contact names&#10;Corrected Timestamp in MSG table&#10;DEBUG = FALSE&#10;Edit to send-sms for dropdowns&#10;" />
     <MESSAGE value="Allow pagination more then 10 pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Allow pagination more then 10 pages" />
+    <MESSAGE value="sandbox" />
+    <option name="LAST_COMMIT_MESSAGE" value="sandbox" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -972,21 +987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/send_sms/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/send_sms/templates/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65014577" vertical-offset="242" max-vertical-offset="585">
-          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/nav.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65597665" vertical-offset="360" max-vertical-offset="930">
@@ -1143,10 +1143,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/send_sms/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.95614034" vertical-offset="183" max-vertical-offset="600">
+        <state vertical-scroll-proportion="-13.625" vertical-offset="183" max-vertical-offset="600">
           <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/send_sms/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7368421" vertical-offset="123" max-vertical-offset="630">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
           <folding />
         </state>
       </provider>
