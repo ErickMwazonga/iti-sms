@@ -165,7 +165,9 @@ def sandbox(request):
     form = SendMsgForm(request.POST or None)
     if form.is_valid():
         number = form.cleaned_data['phoneNumber']
+        contacts = request.POST.getlist['contacts']
         number_list = number.split(", ")
+        number_list.append(contacts)
         message = form.cleaned_data['message']
         deviceID = request.POST.get('deviceID')
         device_obj = device.objects.all()
