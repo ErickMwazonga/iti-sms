@@ -32,15 +32,9 @@
             $('#example-getting-started').multiselect({
                 disableIfEmpty: true,
                 maxHeight: 200,
-                enableCaseInsensitiveFiltering: true,
-                onDropdownHidden: function({{ c.obj.phoneNumber }}){
-                    if ($('#id_phoneNumber').val() != '') {
-                        $('#id_phoneNumber').val($('#id_phoneNumber').val() + ", " + {{ c.obj.phoneNumber }});
-                    }
-                    else {
-                        $('#id_phoneNumber').val(num);
-                    }
-                }
+                onDropdownHidden: function(event) {
+                alert('Dropdown closed.');
+            }
             });
         });
     </script>
