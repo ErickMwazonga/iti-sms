@@ -127,11 +127,6 @@ def deleteContact(request, num):
     return redirect('/contacts/0')
 
 
-# @login_required
-# @permission_required('auth.view_analytics') --TODO
-# def viewAnalytics(request):
-#     return HttpResponse("<h1>Test</h1>")
-
 @login_required
 def createTemplate(request):
     template = msgTemplates.objects.filter(user=request.user)
