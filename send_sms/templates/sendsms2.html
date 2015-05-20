@@ -32,15 +32,7 @@
             $('#contacts').multiselect({
                 nonSelectedText: 'Add Contacts',
                 disableIfEmpty: true,
-                maxHeight: 200,
-                onDropdownHidden: addcontact = function(num) {
-                if ($('#id_phoneNumber').val() != ''){
-                    $('#id_phoneNumber').val($('#id_phoneNumber').val() + ", " + num);
-                }
-                else{
-                    $('#id_phoneNumber').val(num);
-	}
-}
+                maxHeight: 200
             });
         });
     </script>

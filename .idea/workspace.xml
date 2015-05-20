@@ -53,8 +53,8 @@
       <file leaf-file-name="sendsms2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21052632" vertical-offset="393" max-vertical-offset="780">
-              <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.5614035" vertical-offset="318" max-vertical-offset="660">
+              <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -764,7 +764,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432163585209</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="testing seperate to and contact form fields fixed id reference in &lt;script&gt;">
+      <created>1432163932501</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1432163932501</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -852,7 +858,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Change Static File Dirs &amp; Template Dirs" />
     <MESSAGE value="edit settings and add local setting redirect" />
     <MESSAGE value="debug = true" />
     <MESSAGE value="debug = False" />
@@ -877,7 +882,8 @@
     <MESSAGE value="change multiselect text" />
     <MESSAGE value="test" />
     <MESSAGE value="testing seperate to and contact form fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing seperate to and contact form fields" />
+    <MESSAGE value="testing seperate to and contact form fields fixed id reference in &lt;script&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing seperate to and contact form fields fixed id reference in &lt;script&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1275,8 +1281,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21052632" vertical-offset="393" max-vertical-offset="780">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.5614035" vertical-offset="318" max-vertical-offset="660">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
           <folding />
         </state>
       </provider>
