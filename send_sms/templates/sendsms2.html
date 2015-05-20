@@ -33,8 +33,13 @@
                 disableIfEmpty: true,
                 maxHeight: 200,
                 enableCaseInsensitiveFiltering: true,
-                onDropdownHidden: function(){
-                    addcontact({{contact.phoneNumber}})
+                onDropdownHidden: function({{ c.obj.phoneNumber }}){
+                    if ($('#id_phoneNumber').val() != '') {
+                        $('#id_phoneNumber').val($('#id_phoneNumber').val() + ", " + num);
+                    }
+                    else {
+                        $('#id_phoneNumber').val(num);
+                    }
                 }
             });
         });
