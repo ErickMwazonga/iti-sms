@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3>Envoyer des SMS</h3>
+    <div class="col-xs-12 col-sm-6 col-lg-8">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <p>{{ form.phoneNumber.label }}</p>
+            <div class="input-group">
+                <input type="text" class="form-control" id="id_phoneNumber" name="phoneNumber">
+                    <select id="example-getting-started" multiple="multiple">
+                        {% for c_obj in contact_list %}
+                            <option value="{{ c_obj.phoneNumber }}">{{ c_obj.firstName }} {{ c_obj.lastName }}</option>
+                        {% endfor %}
+                <p>{{ form.message.label }}</p>
+                <textarea type="text" class="form-control" id="id_message" name="message" rows="10"></textarea>
+
+            </div>
+            <br>
+            {% for d_obj in device_obj %}
+                {% if username == d_obj.user.username %}
+                    <input type="hidden" name="deviceID" id="id_deviceID" value="{{ d_obj.deviceID }}">
+                {% endif %}
+            {% endfor %}
+            <input type="submit" value="Envoyer" class="btn btn-primary">
+            <input type="reset"  value="Effacer" class="btn btn-danger">
+        </form>
+    </div>
+    <div class="col-xs-6 col-lg-4">
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example-getting-started').multiselect();
+        });
+    </script>
+{% endblock %}

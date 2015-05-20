@@ -160,16 +160,31 @@ def deleteTemplate(request, templateID):
     template.delete()
     return redirect('/template/')
 
-# @login_required
-# def sandbox(request):
-#     device_obj = device.objects.filter(user=request.user)
-#     for d_obj in device_obj:
-#         accountEmail = d_obj.accountEmail
-#         accountPassword = d_obj.accountPassword
-#         gateway = SmsGateway()
-#         gateway.loginDetails(accountEmail, accountPassword)
-#         json_string = str(gateway.getMessages())
-#         json_string_quotes = json_string.replace("'", '"')
-#         json_sting_uni = json_string_quotes.replace("u\"", "\"")
-#         json_string_valid = json_sting_uni.replace("True", "\"TRUE\"")
-#     return HttpResponse(json_string_valid)
+@login_required
+def sandbox(request):
+    form = SendMsgForm(request.POST or None)
+    if form.is_valid():
+        number = form.cleaned_data['phoneNumber']
+        number_list = number.split(", ")
+        message = form.cleaned_data['message']
+        deviceID = request.POST.get('deviceID')
+        device_obj = device.objects.all()
+        for d_obj in device_obj:
+            if d_obj.user == request.user:
+                for num in number_list:
+                    accountEmail = d_obj.accountEmail
+                    accountPassword = d_obj.accountPassword
+                    gateway = SmsGateway()
+                    gateway.loginDetails(accountEmail, accountPassword)
+                    gateway.sendMessageToNumber(num, message, deviceID)
+        messages.success(request, 'Message Envoye')
+        return redirect('/messages/0')
+    username = request.user.username
+    device_obj = device.objects.all()
+    contact_list = contacts.objects.filter(user=request.user)
+    group_list = contactgroup.objects.filter(contact__user=request.user).distinct()
+    template_list = msgTemplates.objects.filter(user=request.user).distinct()
+    context = {"form": form}
+    template = "sendsms2.html"
+    pg = ['active', '', '']
+    return render_to_response(template, locals(), context_instance=RequestContext(request))
