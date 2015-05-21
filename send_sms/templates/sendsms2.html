@@ -14,6 +14,7 @@
                         {% endfor %}
                     </select>
                     <select id="groups">
+                        <label>Groups</label>
                         {% for g_obj in group_list %}
                             <option value="{{ g_obj.contact.all }}">{{ g_obj.groupName }}</option>
                         {% endfor %}
