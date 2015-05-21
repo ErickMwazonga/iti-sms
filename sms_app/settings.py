@@ -24,7 +24,7 @@ DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-#ALLOWED_HOSTS = ['.tahiti-sms.com']
+ALLOWED_HOSTS = ['.tahiti-sms.com']
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
@@ -89,10 +89,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/static/'
 
 STATICFILES_DIRS = (
-    'send_sms/static/css/',
-    'send_sms/static/img/',
-    'send_sms/static/js/',
-    'static/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/static/css/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/static/img/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/static/js/',
 )
 
 
