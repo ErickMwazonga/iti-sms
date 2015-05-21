@@ -6,7 +6,7 @@
         <form method="POST" action="">
             {% csrf_token %}
             <p>{{ form.phoneNumber.label }}</p>
-            <div class="input-group">
+            <div class="input-group form-control">
                 <input type="text" class="form-control" id="id_phoneNumber" name="phoneNumber">
                     <select id="contacts" multiple="multiple">
                         {% for c_obj in contact_list %}
