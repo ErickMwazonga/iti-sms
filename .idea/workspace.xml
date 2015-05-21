@@ -73,8 +73,8 @@
       <file leaf-file-name="sendsms2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47521865" vertical-offset="77" max-vertical-offset="1395">
-              <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.65014577" vertical-offset="77" max-vertical-offset="1395">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -756,7 +756,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432245720343</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Add label">
+      <created>1432247031723</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1432247031723</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -844,7 +850,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Fixed groups to only appear for the user who created them.. changes to DB required." />
     <MESSAGE value="increase max length of group name to 50" />
     <MESSAGE value="added scroll to contacts" />
     <MESSAGE value="fix dropdowns" />
@@ -869,7 +874,8 @@
     <MESSAGE value="remove input-group" />
     <MESSAGE value="add form-control" />
     <MESSAGE value="edit settings.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit settings.py" />
+    <MESSAGE value="Add label" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add label" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1260,8 +1266,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47521865" vertical-offset="77" max-vertical-offset="1395">
-          <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.65014577" vertical-offset="77" max-vertical-offset="1395">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
           <folding />
         </state>
       </provider>
