@@ -73,8 +73,8 @@
       <file leaf-file-name="sendsms2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34985423" vertical-offset="0" max-vertical-offset="1380">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.4373178" vertical-offset="0" max-vertical-offset="1380">
+              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -738,7 +738,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432245311971</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="remove input-group">
+      <created>1432245365727</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1432245365727</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -826,7 +832,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="&#10;STATIC_URL = '/static/static'" />
     <MESSAGE value="&#10;STATIC_URL = '/static/'" />
     <MESSAGE value="Edits to translate some text&#10;Add ability to edit / delete Templates" />
     <MESSAGE value="Fixed groups to only appear for the user who created them.. changes to DB required." />
@@ -851,7 +856,8 @@
     <MESSAGE value="Fix Settings.py" />
     <MESSAGE value="add enableCaseInsensitiveFiltering: true" />
     <MESSAGE value="fixing style of form fields" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing style of form fields" />
+    <MESSAGE value="remove input-group" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove input-group" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1242,8 +1248,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34985423" vertical-offset="0" max-vertical-offset="1380">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.4373178" vertical-offset="0" max-vertical-offset="1380">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
           <folding />
         </state>
       </provider>

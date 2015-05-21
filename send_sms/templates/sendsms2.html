@@ -8,7 +8,7 @@
             <p>{{ form.phoneNumber.label }}</p>
             <div class="">
                 <input type="text" class="form-control" id="id_phoneNumber" name="phoneNumber">
-                    <select id="contacts" multiple="multiple">
+                    <select class="form-control" id="contacts" multiple="multiple">
                         {% for c_obj in contact_list %}
                             <option value="{{ c_obj.phoneNumber }}">{{ c_obj.firstName }} {{ c_obj.lastName }}</option>
                         {% endfor %}
