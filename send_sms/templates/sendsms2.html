@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 {% block content %}
     <h3>Envoyer des SMS</h3>
     <div class="col-xs-12 col-sm-6 col-lg-8">
@@ -34,6 +35,11 @@
                 disableIfEmpty: true,
                 maxHeight: 200
             });
+            $("#contacts").change(function(e){
+                var selected = $(e.target).val()
+                $('#id_phoneNumber').val(selected);
+            })
+            //$('#id_phoneNumber').tagsInput();
         });
     </script>
 {% endblock %}
