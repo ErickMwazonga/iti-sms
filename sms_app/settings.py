@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'qfx42u61@@i^s@j^1n%^-^^*8&$(00sa4j)1b@wpavb&nj4d@@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
@@ -31,8 +31,12 @@ TEMPLATE_DEBUG = True
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'itisms',
+        'USER': 'root',
+        'PASSWORD': 'r33b00ts',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 
@@ -82,7 +86,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#STATIC_ROOT = '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/static/'
+STATIC_ROOT = '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/static/'
 
 STATICFILES_DIRS = (
     'send_sms/static/css/',
