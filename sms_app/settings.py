@@ -100,7 +100,7 @@ TEMPLATE_DIRS =(
     [os.path.join(BASE_DIR, 'send_sms/templates/')],
     [os.path.join(BASE_DIR, 'sms_app/templates')],
     'sms_app/templates/',
-    #'/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/templates/',
+    '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/templates/',
 )
 
 #Login/Logout
