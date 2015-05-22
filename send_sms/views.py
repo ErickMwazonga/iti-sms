@@ -158,7 +158,7 @@ def deleteTemplate(request, templateID):
     return redirect('/template/')
 
 @login_required
-def sandbox(request):
+def sandbox(request, page):
     contact_list = contacts.objects.filter(user=request.user)
     form = AddContactForm(request.POST or None)
     if form.is_valid():
