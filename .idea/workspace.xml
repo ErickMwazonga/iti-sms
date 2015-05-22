@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="073a501b-af85-441a-bef0-cc98ea5a032e" name="Default" comment="push multiselect to contacts page">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/Airport-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/Finder-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/SystemPref-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/VoiceOverUtility-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/itiSMS_slider.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/iti_SMS.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/slider_1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/img/bg.jpg" afterPath="$PROJECT_DIR$/static/img/bg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sms_app/templates/registration/login.html" afterPath="$PROJECT_DIR$/sms_app/templates/registration/login.html" />
+    <list default="true" id="073a501b-af85-441a-bef0-cc98ea5a032e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/templates/sandbox.html" afterPath="$PROJECT_DIR$/send_sms/templates/sandbox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/urls.py" afterPath="$PROJECT_DIR$/send_sms/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/views.py" afterPath="$PROJECT_DIR$/send_sms/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sms_app.iws" />
@@ -99,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sandbox.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sandbox.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/sandbox.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2083335" vertical-offset="919" max-vertical-offset="1770">
-              <caret line="68" column="62" selection-start-line="0" selection-start-column="0" selection-end-line="112" selection-end-column="7" />
+            <state vertical-scroll-proportion="1.6180758" vertical-offset="150" max-vertical-offset="1770">
+              <caret line="47" column="154" selection-start-line="47" selection-start-column="154" selection-end-line="47" selection-end-column="154" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -113,10 +102,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sms_app/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9300292" vertical-offset="947" max-vertical-offset="1785">
+            <state vertical-scroll-proportion="27.583334" vertical-offset="947" max-vertical-offset="1785">
               <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -169,10 +158,10 @@
         <option value="$PROJECT_DIR$/send_sms/templates/sendsms2.html" />
         <option value="$PROJECT_DIR$/sms_app/settings.py" />
         <option value="$PROJECT_DIR$/send_sms/templates/contacts.html" />
-        <option value="$PROJECT_DIR$/send_sms/templates/sandbox.html" />
         <option value="$PROJECT_DIR$/send_sms/views.py" />
         <option value="$PROJECT_DIR$/send_sms/urls.py" />
         <option value="$PROJECT_DIR$/sms_app/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/send_sms/templates/sandbox.html" />
       </list>
     </option>
   </component>
@@ -625,12 +614,6 @@
       <option name="number" value="Default" />
       <updated>1431133196563</updated>
     </task>
-    <task id="LOCAL-00011" summary="increase max length of group name to 50">
-      <created>1431992235854</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1431992235854</updated>
-    </task>
     <task id="LOCAL-00012" summary="added scroll to contacts">
       <created>1431999644473</created>
       <option name="number" value="00012" />
@@ -919,7 +902,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432260110209</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="new login template to sandbox">
+      <created>1432261972497</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1432261972497</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -984,7 +973,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="change multiselect text" />
     <MESSAGE value="test" />
     <MESSAGE value="testing seperate to and contact form fields" />
     <MESSAGE value="testing seperate to and contact form fields fixed id reference in &lt;script&gt;" />
@@ -1009,7 +997,8 @@
     <MESSAGE value="Debug = False &amp; multiselect for contacts in sandbox" />
     <MESSAGE value="multiselect customoptions" />
     <MESSAGE value="push multiselect to contacts page" />
-    <option name="LAST_COMMIT_MESSAGE" value="push multiselect to contacts page" />
+    <MESSAGE value="new login template to sandbox" />
+    <option name="LAST_COMMIT_MESSAGE" value="new login template to sandbox" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1384,18 +1373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/send_sms/templates/sandbox.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2083335" vertical-offset="919" max-vertical-offset="1770">
-          <caret line="68" column="62" selection-start-line="0" selection-start-column="0" selection-end-line="112" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2048" max-vertical-offset="2415">
@@ -1414,12 +1391,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sms_app/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9300292" vertical-offset="947" max-vertical-offset="1785">
+        <state vertical-scroll-proportion="27.583334" vertical-offset="947" max-vertical-offset="1785">
           <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/send_sms/templates/sandbox.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6180758" vertical-offset="150" max-vertical-offset="1770">
+          <caret line="47" column="154" selection-start-line="47" selection-start-column="154" selection-end-line="47" selection-end-column="154" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
