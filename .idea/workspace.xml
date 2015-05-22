@@ -73,8 +73,8 @@
       <file leaf-file-name="sendsms.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38432837" vertical-offset="484" max-vertical-offset="1395">
-              <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.4197761" vertical-offset="0" max-vertical-offset="1395">
+              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -778,7 +778,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432255493351</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="edit no selected text on groups multiselect">
+      <created>1432255581874</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1432255581874</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -866,7 +872,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="sandbox" />
     <MESSAGE value="import jquery" />
     <MESSAGE value="1st attemp on close add contacts" />
     <MESSAGE value="add serach contacts" />
@@ -891,7 +896,8 @@
     <MESSAGE value="add multiple=&quot;multiple&quot; to group form input" />
     <MESSAGE value="rm multiple=&quot;multiple&quot; to group form input" />
     <MESSAGE value="Push live new sendsms with tags and multiselect" />
-    <option name="LAST_COMMIT_MESSAGE" value="Push live new sendsms with tags and multiselect" />
+    <MESSAGE value="edit no selected text on groups multiselect" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit no selected text on groups multiselect" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1282,8 +1288,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38432837" vertical-offset="484" max-vertical-offset="1395">
-          <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.4197761" vertical-offset="0" max-vertical-offset="1395">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
           <folding />
         </state>
       </provider>
