@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="073a501b-af85-441a-bef0-cc98ea5a032e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/templates/sendsms.html" afterPath="$PROJECT_DIR$/send_sms/templates/sendsms.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/views.py" afterPath="$PROJECT_DIR$/send_sms/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sms_app.iws" />
@@ -61,31 +60,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/send_sms/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8125" vertical-offset="220" max-vertical-offset="2805">
+            <state vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="2805">
               <caret line="52" column="91" selection-start-line="52" selection-start-column="91" selection-end-line="52" selection-end-column="91" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sendsms2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="26.416666" vertical-offset="859" max-vertical-offset="1395">
-              <caret line="15" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="87" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sendsms.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sendsms.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.083334" vertical-offset="799" max-vertical-offset="1395">
-              <caret line="87" column="14" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.38432837" vertical-offset="484" max-vertical-offset="1395">
+              <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -124,8 +113,8 @@
         <option value="$PROJECT_DIR$/static/js/custom.js" />
         <option value="$PROJECT_DIR$/sms_app/settings.py" />
         <option value="$PROJECT_DIR$/send_sms/templates/sendsms2.html" />
-        <option value="$PROJECT_DIR$/send_sms/templates/sendsms.html" />
         <option value="$PROJECT_DIR$/send_sms/views.py" />
+        <option value="$PROJECT_DIR$/send_sms/templates/sendsms.html" />
       </list>
     </option>
   </component>
@@ -783,7 +772,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432254858268</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Push live new sendsms with tags and multiselect">
+      <created>1432255493351</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1432255493351</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -871,7 +866,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Allow pagination more then 10 pages" />
     <MESSAGE value="sandbox" />
     <MESSAGE value="import jquery" />
     <MESSAGE value="1st attemp on close add contacts" />
@@ -896,7 +890,8 @@
     <MESSAGE value="fix template dir" />
     <MESSAGE value="add multiple=&quot;multiple&quot; to group form input" />
     <MESSAGE value="rm multiple=&quot;multiple&quot; to group form input" />
-    <option name="LAST_COMMIT_MESSAGE" value="rm multiple=&quot;multiple&quot; to group form input" />
+    <MESSAGE value="Push live new sendsms with tags and multiselect" />
+    <option name="LAST_COMMIT_MESSAGE" value="Push live new sendsms with tags and multiselect" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1277,18 +1272,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms.html">
+    <entry file="file://$PROJECT_DIR$/send_sms/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.083334" vertical-offset="799" max-vertical-offset="1395">
-          <caret line="87" column="14" selection-start-line="87" selection-start-column="14" selection-end-line="87" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="220" max-vertical-offset="2805">
+          <caret line="52" column="91" selection-start-line="52" selection-start-column="91" selection-end-line="52" selection-end-column="91" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/send_sms/views.py">
+    <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8125" vertical-offset="220" max-vertical-offset="2805">
-          <caret line="52" column="91" selection-start-line="52" selection-start-column="91" selection-end-line="52" selection-end-column="91" />
+        <state vertical-scroll-proportion="0.38432837" vertical-offset="484" max-vertical-offset="1395">
+          <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
           <folding />
         </state>
       </provider>
