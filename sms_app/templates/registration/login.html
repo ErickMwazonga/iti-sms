@@ -1,114 +1,118 @@
 <!doctype html>
 <html lang="en">
-    {% load staticfiles %}
-<!-- MAIN HEADER  -->
-
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>itievolution SMS | SMS pour les entreprises Polynésiennes</title>
-
     <link href="/static/bootstrap.min.css" rel="stylesheet" />
 	<link href="/static/css/get-shit-done.css" rel="stylesheet" />
     <link href="/static/css/demo.css" rel="stylesheet" />
 
     <!--     Font Awesome     -->
-    <link href="/static/css/font-awesome.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
-
+  
 </head>
 
-<!-- END MAIN HEADER  -->
-
 <body>
-
-<!-- CONTENT FOR LOGIN -->
-<div class='blurred-container'>
-    <a href="#">
-         <div class="logo-container">
-            <div class="logo">
-                <img src="/static/img/new_logo.png">
+ <div id="navbar-full">
+    <div id="navbar">
+    <!--    
+        navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange  
+        -->
+        <nav class="navbar navbar-ct-blue navbar-transparent navbar-fixed-top" role="navigation">
+          
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">itiSMS</a>
             </div>
-            <div class="brand">
-                ITIEVOLUTION - SMS
-            </div>
-        </div>
-    </a>
-    <div class="motto">
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://itievolution.com">Contactez-nous</a></li>
+                    
+                    <li><button class="btn btn-round btn-default" data-toggle="modal" data-target="#myModal">Connexion</button></li>
+               </ul>
+              
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+     <div class="blurred-container">
+            <div class="img-src" style="background-image: url('/static/img/bg.jpg')"><div align="center"><img style="margin-top: 120px; width:60%;" src="/static/img/iti_SMS.png"></div></div>
+     </div>
+    </div><!--  end navbar -->
 
-       <div><img src="/static/img/sms_head.png"></div>
-
-    </div>
-  <div class="img-src" style="background-color:#2C93FF;')"></div>
-  <div class='img-src blur' style="background-color: 3C5D7F;')"></div>
-</div>
+</div> <!-- end menu-dropdown -->
 
 <div class="main">
-     <div class="section-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 ">
-                    <h5> Pour plus d'informations concernant nos services SMS -
-                        <a href="http://itievolution.com" class="btn btn-info btn-fill pull-right">Contactez-nous</a>
-                    </h5>
-                </div>
-            </div>
-        </div>
+    <div class="container tim-container" style="max-width:800px; padding-top:100px; padding-bottom: 100px;">
+       <h1 class="text-center">SMS<br>envoyés plus facilement<br>plus rapide, et mieux!<small class="subtitle">itiSMS - SMS a partir de tout périphérique</small></h1>
+       <p align="center">itiSMS est une application pour les entreprises Polynésiennes qui permet d'envoyer et de recevoir vos SMS à partir de votre 
+       ordinateur par le biais d'un navigateur web, ou même depuis une tablette. Ceci facilite donc la saisie des messages si vous êtes chez vous devant votre PC. 
+       <br />
+	   Vos SMS, contacts et historique d'SMS sont synchronisés en temps réel, de sorte que vous puissiez les consultez directement dans l'application web itiSMS.</p>      
+    <!--     end extras --> 
+    <br />
+    <br />
+    <br />
+    <div class="col-md-3" align="center"><img src="/static/img/Airport-icon.png"></div>
+    <div class="col-md-3" align="center"><img src="/static/img/VoiceOverUtility-icon.png"></div>
+    <div class="col-md-3" align="center"><img src="/static/img/Finder-icon.png"></div>
+    <div class="col-md-3" align="center"><img src="/static/img/SystemPref-icon.png"></div>
+    <div class="col-md-3" align="center"><h4>SMS illimités</h4><p align="center">Envoyer et de recevoir vos SMS à partir de tout périphérique 
+    par le biais d'un navigateur web</p></div>
+    <div class="col-md-3" align="center"><h4>Communiquez</h4><p align="center">(Jeux,Offres,Rappels) Tout grâce aux SMS 
+    Ce canal de communication reste le plus efficace !</p></div>
+    <div class="col-md-3" align="center"><h4>Efficacité</h4><p align="center">Lu à 92%, le SMS marketing est clairement un média qui tient ses promesses malgré la brièveté du message.</p></div>
+    <div class="col-md-3" align="center"><h4>Gérer</h4><p align="center">Organisez facilement vos contacts sur votre tableau de bord. Créer une groupe de contacts pour vos campagnes</p></div>
+    <!-- end container -->    
     </div>
-    <div class="container tim-container">
-
-        <div id="inputs" style="padding-top:60px;padding-bottom:60px;">
-            <div class="tim-title">
-                <h3>S'identifier</h3>
-            </div>
-
-             <div class="row">
-                    <div class="col-sm-3">
-                	<div class="form-group">
-                  <form action ="" method ="POST">
-                  {% csrf_token %}
-        	        	<input type="text" value="" name="username" placeholder="email" class="form-control" />
-                	</div>
-                </div>
-
-                <div class="col-sm-3">
-                  <div class="form-group">
-                    <input type="password" name="password" placeholder="mot de passe" class="form-control" />
-                  </div>
-                </div>
-
-                <div class="col-sm-3">
-                  <input type="submit" name="se connecter" value="se connecter" class="btn btn-info btn-default" />
-                </div>
-                </form>
-                <div class="col-sm-3">
-
-                </div>
-              </div>
-
-             <!-- FORM ENDS HERE -->
-
-
-        </div>
-
-    </div>
-    </div>
+    <hr>
+    <p align="center">itiSMS | itievolution 2015</p>
+    
+<!-- end container -->
 </div>
-<!-- END CONTENT FOR LOGIN -->
+<!-- end main -->
+<!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">S'identifier</h4>
+                      </div>
+                      <div class="modal-body">
+                            <form action ="" method ="POST">
+                                {% csrf_token %}
+                                <input type="text" value="" name="username" placeholder="email" class="form-control" />
+                                <input type="password" name="password" placeholder="mot de passe" class="form-control" />
+                                <input type="submit" name="se connecter" value="se connecter" class="btn btn-info btn-default" />
+                            </form>
+                      </div>
+                      <div class="modal-footer">
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+<!--    end modal -->
 </body>
-<!-- FOOTER -->
-<!-- MAIN FOOTER SCRIPTS -->
-   <script src="/static/js/jquery-1.10.2.js" type="text/javascript"></script>
-	<script src="/static/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
 
-	<script src="/static/js/bootstrap.js" type="text/javascript"></script>
+
+    <script src="/static/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="/static/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+	<script src="/static/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="/static/js/gsdk-checkbox.js"></script>
 	<script src="/static/js/gsdk-radio.js"></script>
-	<script src="/static/js/gsdk-bootstrapswitch.js"></script>
+	<script src="/static/js/gsdk-switch.js"></script>
 	<script src="/static/js/get-shit-done.js"></script>
-
     <script src="/static/js/custom.js"></script>
-<!-- END MAIN FOOTER SCRIPTS -->
-<!-- END FOOTER -->
+
+
 </html>
