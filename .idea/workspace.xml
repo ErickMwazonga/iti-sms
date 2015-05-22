@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="073a501b-af85-441a-bef0-cc98ea5a032e" name="Default" comment="">
+    <list default="true" id="073a501b-af85-441a-bef0-cc98ea5a032e" name="Default" comment="add multiple=&quot;multiple&quot; to group form input">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/templates/sendsms2.html" afterPath="$PROJECT_DIR$/send_sms/templates/sendsms2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -73,8 +73,8 @@
       <file leaf-file-name="sendsms2.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3956044" vertical-offset="45" max-vertical-offset="1395">
-              <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+            <state vertical-scroll-proportion="-1.1473881" vertical-offset="840" max-vertical-offset="1395">
+              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -792,7 +792,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432247783554</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="add multiple=&quot;multiple&quot; to group form input">
+      <created>1432253445292</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1432253445292</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -825,7 +831,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1377551" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1377551" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -880,7 +886,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fix dropdowns" />
     <MESSAGE value="Edit to MSG table, displaying contact names&#10;Corrected Timestamp in MSG table&#10;DEBUG = FALSE&#10;Edit to send-sms for dropdowns&#10;" />
     <MESSAGE value="Allow pagination more then 10 pages" />
     <MESSAGE value="sandbox" />
@@ -905,7 +910,8 @@
     <MESSAGE value="Add label" />
     <MESSAGE value="add spacing to send-sms template" />
     <MESSAGE value="fix template dir" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix template dir" />
+    <MESSAGE value="add multiple=&quot;multiple&quot; to group form input" />
+    <option name="LAST_COMMIT_MESSAGE" value="add multiple=&quot;multiple&quot; to group form input" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1296,8 +1302,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3956044" vertical-offset="45" max-vertical-offset="1395">
-          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+        <state vertical-scroll-proportion="-1.1473881" vertical-offset="840" max-vertical-offset="1395">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
           <folding />
         </state>
       </provider>
