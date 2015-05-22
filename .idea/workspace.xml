@@ -63,8 +63,8 @@
       <file leaf-file-name="contacts.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/contacts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47521865" vertical-offset="812" max-vertical-offset="1635">
-              <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.78134114" vertical-offset="812" max-vertical-offset="1635">
+              <caret line="72" column="94" selection-start-line="72" selection-start-column="94" selection-end-line="72" selection-end-column="94" />
               <folding />
             </state>
           </provider>
@@ -517,12 +517,6 @@
       <option name="number" value="Default" />
       <updated>1431133196563</updated>
     </task>
-    <task id="LOCAL-00023" summary="direct function in multiselect script">
-      <created>1432089102620</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1432089102620</updated>
-    </task>
     <task id="LOCAL-00024" summary="direct function in multiselect script tweak">
       <created>1432089376541</created>
       <option name="number" value="00024" />
@@ -811,7 +805,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432327382891</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="edit to add edit/delete to contacts.html">
+      <created>1432327436606</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1432327436606</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1291,8 +1291,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/contacts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47521865" vertical-offset="812" max-vertical-offset="1635">
-          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.78134114" vertical-offset="812" max-vertical-offset="1635">
+          <caret line="72" column="94" selection-start-line="72" selection-start-column="94" selection-end-line="72" selection-end-column="94" />
           <folding />
         </state>
       </provider>
