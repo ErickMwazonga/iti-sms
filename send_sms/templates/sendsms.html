@@ -1,65 +1,27 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 {% block content %}
     <h3>Envoyer des SMS</h3>
     <div class="col-xs-12 col-sm-6 col-lg-8">
         <form method="POST" action="">
             {% csrf_token %}
             <p>{{ form.phoneNumber.label }}</p>
-            <div class="input-group">
-                <input type="text" class="form-control" id="id_phoneNumber" name="phoneNumber">
-                <div class="input-group-btn">
-                    <button class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                    Contacts
-                    <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        {% for contact in contact_list %}
-                            <li role="presentation">
-                                <a href="#" class="list-group-item" onclick="addcontact({{contact.phoneNumber}})"
-                                value="{{contact.phoneNumber}}" >{{contact.firstName}} {{contact.lastName}}</a>
-                            </li>
+            <div class="">
+                <input type="text" class="form-control" id="id_phoneNumber" name="phoneNumber"><br />
+                    <select class="form-control" id="contacts" multiple="multiple">
+                        {% for c_obj in contact_list %}
+                            <option value="{{ c_obj.phoneNumber }}">{{ c_obj.firstName }} {{ c_obj.lastName }}</option>
                         {% endfor %}
-                    </ul>
-                </div>
-                
-                <div class="input-group-btn">
-                    <button class="btn btn-default dropdown-toggle" id="dropdownMenu3" data-toggle="dropdown" aria-expanded="true">
-                    Groupes
-                    <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu3">
-                        {% for group in group_list %}
-                            <li role="presentation">
-                                <a href="#" class="list-group-item" onclick="addgroup('{{group.contact.all}}')">
-                                    {{group.groupName}}
-                                </a>
-                            </li>
+                    </select>
+                    <select id="groups">
+                        <label>Groups</label>
+                        {% for g_obj in group_list %}
+                            <option value="{{ g_obj.contact.all }}">{{ g_obj.groupName }}</option>
                         {% endfor %}
-                    </ul>
-                </div>
-            </div>
-            <p>{{ form.message.label }}</p>
-            <div class="input-group">
+                    </select><br /><br/>
+                <p>{{ form.message.label }}</p>
                 <textarea type="text" class="form-control" id="id_message" name="message" rows="10"></textarea>
-                <div class="input-group-btn">
-                    <button class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">
-                    Templates
-                    <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-                        <label>Templates</label>
-                        {% for template in template_list %}
-                            <li role="presentation">
-                                <a href="#"  onclick="addtemplate('{{template.msgText}}')"
-                                value="{{template.msgText}}" >{{template.name}}</a>
-                            </li>
-                        {% endfor %}
-                        <label>Creer un Nouveau</label>
-                        <li role="presentation">
-                            <a href="/template/" class="list-group-item">Creer un Template</a>
-                        </li>
-                    </ul>
-                </div>
+
             </div>
             <br>
             {% for d_obj in device_obj %}
@@ -73,4 +35,54 @@
     </div>
     <div class="col-xs-6 col-lg-4">
     </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#contacts').multiselect({
+                nonSelectedText: 'Add Contacts',
+                disableIfEmpty: true,
+                maxHeight: 200,
+                enableCaseInsensitiveFiltering: true
+            });
+            $('#groups').multiselect({
+                nonSelectedText: 'Add Contacts',
+                disableIfEmpty: true,
+                maxHeight: 200
+            });
+            var clist = [];
+            $("#contacts").change(function(e){
+                var selected = $(e.target).val()
+                if (selected == null){
+                    $('#id_phoneNumber').removeTag(clist[0]);
+                    list = [];
+                }else {
+                    for (var i = 0; i < clist.length; i++){
+                        $('#id_phoneNumber').removeTag(clist[i]);
+                    }
+                    for (var i = 0; i < selected.length; i++){
+                        $('#id_phoneNumber').addTag(selected[i])
+                    }
+                    clist = selected;
+                }
+            })
+            var glist = [];
+            $("#groups").change(function(e){
+                var selected = $(e.target).val()
+                selected = selected.split(', ')
+                for (var i = 0; i < glist.length; i++){
+                    $('#id_phoneNumber').removeTag(glist[i]);
+                }
+                glist = []
+                for (var i = 0; i < selected.length; i++){
+                    var num = parseInt(selected[i].split(' - ')[1]);
+                    glist = glist.concat([num]);
+                    $('#id_phoneNumber').addTag(num);
+                }
+            })
+            $('#id_phoneNumber').tagsInput({
+                'width': '400px',
+                'height': '80px',
+                'defaultText': ''
+            });
+        });
+    </script>
 {% endblock %}

@@ -26,7 +26,9 @@ def sendSMS(request):
     form = SendMsgForm(request.POST or None)
     if form.is_valid():
         number = form.cleaned_data['phoneNumber']
+        #selected_contacts = request.POST.getlist['contacts']
         number_list = number.split(", ")
+        #number_list.append(selected_contacts)
         message = form.cleaned_data['message']
         deviceID = request.POST.get('deviceID')
         device_obj = device.objects.all()
@@ -182,6 +184,6 @@ def sandbox(request):
     group_list = contactgroup.objects.filter(contact__user=request.user).distinct()
     template_list = msgTemplates.objects.filter(user=request.user).distinct()
     context = {"form": form}
-    template = "sendsms2.html"
+    template = "sendsms.html"
     pg = ['active', '', '']
     return render_to_response(template, locals(), context_instance=RequestContext(request))
