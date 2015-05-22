@@ -157,7 +157,19 @@ def deleteTemplate(request, templateID):
     template.delete()
     return redirect('/template/')
 
+
 @login_required
-def sandbox(request):
-    template = "sandbox.html"
-    return render_to_response(template, locals(), context_instance=RequestContext(request))
+def editGroup(request, groupID):
+    group = contactgroup.objects.filter(user=request.user).get(id=groupID)
+    form = AddContactToGroupForm(request.POST or None, instance=group)
+    if form.is_valid():
+        save_it = form.save(commit=False)
+        save_it.user = request.user
+        save_it.save()
+        return redirect('/contacts/0')
+    return render_to_response('editgroup.html', locals(), context_instance=RequestContext(request))
+
+# @login_required
+# def sandbox(request):
+#     template = "sandbox.html"
+#     return render_to_response(template, locals(), context_instance=RequestContext(request))

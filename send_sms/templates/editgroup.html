@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3>Ajouter des Groupes</h3>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <select id="multiselect-contacts" multiple="multiple" name="checks[]">
+            {% for contact in contact_list %}
+                <option value="{{ contact.phoneNumber }}">{{ contact.firstname }} {{ contact.lastName }}</option>
+            {% endfor %}
+        </select>
+    	<input type="submit" value="Sauvez" class="btn btn-primary" />
+    	<input type="reset"  value="Effacer" class="btn btn-danger" />
+    </form>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#multiselect-contacts').multiselect({
+                nonSelectedText: 'Add Contacts',
+                disableIfEmpty: true,
+                maxHeight: 200,
+                enableCaseInsensitiveFiltering: true
+            });
+        });
+    </script>
+{% endblock %}
