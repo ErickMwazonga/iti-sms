@@ -105,8 +105,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sms_app/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.116618" vertical-offset="0" max-vertical-offset="1845">
-              <caret line="117" column="7" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.4373178" vertical-offset="1290" max-vertical-offset="1875">
+              <caret line="96" column="38" selection-start-line="96" selection-start-column="38" selection-end-line="96" selection-end-column="38" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -600,12 +600,6 @@
       <option name="number" value="Default" />
       <updated>1431133196563</updated>
     </task>
-    <task id="LOCAL-00015" summary="Edit to MSG table, displaying contact names&#10;Corrected Timestamp in MSG table&#10;DEBUG = FALSE&#10;Edit to send-sms for dropdowns&#10;">
-      <created>1432077956574</created>
-      <option name="number" value="00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1432077956574</updated>
-    </task>
     <task id="LOCAL-00016" summary="Allow pagination more then 10 pages">
       <created>1432078676766</created>
       <option name="number" value="00016" />
@@ -894,7 +888,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432263010852</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="move new longin from sandbox to /">
+      <created>1432263136597</created>
+      <option name="number" value="00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1432263136598</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -919,7 +919,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1267" height="706" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3282313" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -959,7 +959,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="test" />
     <MESSAGE value="testing seperate to and contact form fields" />
     <MESSAGE value="testing seperate to and contact form fields fixed id reference in &lt;script&gt;" />
     <MESSAGE value="testing seperate to and contact form fields, removed the onlick in &lt;script&gt;" />
@@ -984,7 +983,8 @@
     <MESSAGE value="multiselect customoptions" />
     <MESSAGE value="push multiselect to contacts page" />
     <MESSAGE value="new login template to sandbox" />
-    <option name="LAST_COMMIT_MESSAGE" value="new login template to sandbox" />
+    <MESSAGE value="move new longin from sandbox to /" />
+    <option name="LAST_COMMIT_MESSAGE" value="move new longin from sandbox to /" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1389,8 +1389,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sms_app/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.116618" vertical-offset="0" max-vertical-offset="1845">
-          <caret line="117" column="7" selection-start-line="117" selection-start-column="7" selection-end-line="117" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.4373178" vertical-offset="1290" max-vertical-offset="1875">
+          <caret line="96" column="38" selection-start-line="96" selection-start-column="38" selection-end-line="96" selection-end-column="38" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
