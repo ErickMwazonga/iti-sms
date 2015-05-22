@@ -63,8 +63,8 @@
       <file leaf-file-name="contacts.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/contacts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6938776" vertical-offset="827" max-vertical-offset="1620">
-              <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.47521865" vertical-offset="812" max-vertical-offset="1635">
+              <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -517,12 +517,6 @@
       <option name="number" value="Default" />
       <updated>1431133196563</updated>
     </task>
-    <task id="LOCAL-00022" summary="add serach contacts">
-      <created>1432087364929</created>
-      <option name="number" value="00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1432087364929</updated>
-    </task>
     <task id="LOCAL-00023" summary="direct function in multiselect script">
       <created>1432089102620</created>
       <option name="number" value="00023" />
@@ -811,7 +805,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432327326270</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="edit to add edit/delete to contacts.html">
+      <created>1432327382891</created>
+      <option name="number" value="00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1432327382891</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1291,8 +1291,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/contacts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6938776" vertical-offset="827" max-vertical-offset="1620">
-          <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.47521865" vertical-offset="812" max-vertical-offset="1635">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
           <folding />
         </state>
       </provider>
