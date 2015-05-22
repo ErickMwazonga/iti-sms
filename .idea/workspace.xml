@@ -63,8 +63,8 @@
       <file leaf-file-name="contacts.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/contacts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6938776" vertical-offset="857" max-vertical-offset="1650">
-              <caret line="73" column="61" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.7376093" vertical-offset="857" max-vertical-offset="1650">
+              <caret line="74" column="131" selection-start-line="74" selection-start-column="131" selection-end-line="74" selection-end-column="131" />
               <folding />
             </state>
           </provider>
@@ -517,12 +517,6 @@
       <option name="number" value="Default" />
       <updated>1431133196563</updated>
     </task>
-    <task id="LOCAL-00020" summary="1st attemp on close add contacts">
-      <created>1432086756206</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1432086756206</updated>
-    </task>
     <task id="LOCAL-00021" summary="1st attemp on close add contacts">
       <created>1432086904169</created>
       <option name="number" value="00021" />
@@ -811,7 +805,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432326884903</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="adding edit/delete to contacts.html">
+      <created>1432327262436</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1432327262436</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -876,7 +876,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="rm test code" />
     <MESSAGE value="Fix Settings.py" />
     <MESSAGE value="add enableCaseInsensitiveFiltering: true" />
     <MESSAGE value="fixing style of form fields" />
@@ -901,7 +900,8 @@
     <MESSAGE value="Creating edit group form" />
     <MESSAGE value="debug = true for testing" />
     <MESSAGE value="contact_list = contacts.objects.filter(user=request.user)" />
-    <option name="LAST_COMMIT_MESSAGE" value="contact_list = contacts.objects.filter(user=request.user)" />
+    <MESSAGE value="adding edit/delete to contacts.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding edit/delete to contacts.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1291,8 +1291,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/contacts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6938776" vertical-offset="857" max-vertical-offset="1650">
-          <caret line="73" column="61" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.7376093" vertical-offset="857" max-vertical-offset="1650">
+          <caret line="74" column="131" selection-start-line="74" selection-start-column="131" selection-end-line="74" selection-end-column="131" />
           <folding />
         </state>
       </provider>

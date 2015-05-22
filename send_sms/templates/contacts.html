@@ -71,8 +71,8 @@
                 <td>{{ cg.groupName }}</td>
                 {% for name in cg.contact.all %}
                     <td>{{name.firstName}} {{name.lastName}},</td>
-                    <td><a href="/contacts/edit-group/{{cg.id}}">Editer</a>/<a href="/contacts/group/delete/{{cg.id}}">Effacer</a></td>
                 {% endfor %}
+                <td><a href="/contacts/edit-group/{{cg.id}}">Editer</a>/<a href="/contacts/group/delete/{{cg.id}}">Effacer</a></td>
             </tr>
         {% endfor %}
         </tbody>
