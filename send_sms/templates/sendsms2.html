@@ -13,7 +13,7 @@
                             <option value="{{ c_obj.phoneNumber }}">{{ c_obj.firstName }} {{ c_obj.lastName }}</option>
                         {% endfor %}
                     </select>
-                    <select id="groups">
+                    <select id="groups" multiple="multiple">
                         <label>Groups</label>
                         {% for g_obj in group_list %}
                             <option value="{{ g_obj.contact.all }}">{{ g_obj.groupName }}</option>
