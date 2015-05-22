@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="073a501b-af85-441a-bef0-cc98ea5a032e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sms_app/settings.py" afterPath="$PROJECT_DIR$/sms_app/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sms_app.iws" />
@@ -39,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sms_app/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1800">
-              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.4017857" vertical-offset="105" max-vertical-offset="1800">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -89,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sandbox.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sandbox.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/sandbox.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8250729" vertical-offset="992" max-vertical-offset="1920">
+            <state vertical-scroll-proportion="-11.791667" vertical-offset="992" max-vertical-offset="1920">
               <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding />
             </state>
@@ -133,8 +134,8 @@
         <option value="$PROJECT_DIR$/send_sms/templates/sendsms2.html" />
         <option value="$PROJECT_DIR$/send_sms/urls.py" />
         <option value="$PROJECT_DIR$/send_sms/views.py" />
-        <option value="$PROJECT_DIR$/sms_app/settings.py" />
         <option value="$PROJECT_DIR$/send_sms/templates/sandbox.html" />
+        <option value="$PROJECT_DIR$/sms_app/settings.py" />
       </list>
     </option>
   </component>
@@ -254,24 +255,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="send_sms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sms_app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iti-sms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="send_sms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -551,12 +534,6 @@
       <created>1431133196563</created>
       <option name="number" value="Default" />
       <updated>1431133196563</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Allowed Hosts = tahiti-sms.com">
-      <created>1431734897307</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1431734897307</updated>
     </task>
     <task id="LOCAL-00007" summary="&#10;STATIC_URL = '/static/static'">
       <created>1431736039776</created>
@@ -846,7 +823,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432259334303</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Debug = False &amp; multiselect for contacts in sandbox">
+      <created>1432259527610</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1432259527610</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -873,7 +856,7 @@
     <frame x="0" y="23" width="1267" height="706" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3282313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979593" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1309,14 +1292,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sms_app/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1800">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2183" max-vertical-offset="2805">
@@ -1351,8 +1326,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/sandbox.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8250729" vertical-offset="992" max-vertical-offset="1920">
+        <state vertical-scroll-proportion="-11.791667" vertical-offset="992" max-vertical-offset="1920">
           <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sms_app/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4017857" vertical-offset="105" max-vertical-offset="1800">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding />
         </state>
       </provider>
