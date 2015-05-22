@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="073a501b-af85-441a-bef0-cc98ea5a032e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sms_app/templates/registration/login.html" afterPath="$PROJECT_DIR$/sms_app/templates/registration/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/urls.py" afterPath="$PROJECT_DIR$/send_sms/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/views.py" afterPath="$PROJECT_DIR$/send_sms/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sms_app.iws" />
@@ -95,8 +94,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sms_app/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13992538" vertical-offset="0" max-vertical-offset="1890">
-              <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.30783582" vertical-offset="795" max-vertical-offset="1830">
+              <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -579,12 +578,6 @@
       <option name="number" value="Default" />
       <updated>1431133196563</updated>
     </task>
-    <task id="LOCAL-00025" summary="testing on hidden function">
-      <created>1432090507205</created>
-      <option name="number" value="00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1432090507205</updated>
-    </task>
     <task id="LOCAL-00026" summary="change multiselect text">
       <created>1432090933949</created>
       <option name="number" value="00026" />
@@ -873,7 +866,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432327632266</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="add delete groups, added meta tag to login page to fix responsive">
+      <created>1432329256585</created>
+      <option name="number" value="00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1432329256585</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -961,7 +960,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fixing style of form fields" />
     <MESSAGE value="remove input-group" />
     <MESSAGE value="add form-control" />
     <MESSAGE value="edit settings.py" />
@@ -986,7 +984,8 @@
     <MESSAGE value="adding edit/delete to contacts.html" />
     <MESSAGE value="edit to add edit/delete to contacts.html" />
     <MESSAGE value="formatting groups table on contacts page" />
-    <option name="LAST_COMMIT_MESSAGE" value="formatting groups table on contacts page" />
+    <MESSAGE value="add delete groups, added meta tag to login page to fix responsive" />
+    <option name="LAST_COMMIT_MESSAGE" value="add delete groups, added meta tag to login page to fix responsive" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1378,8 +1377,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sms_app/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13992538" vertical-offset="0" max-vertical-offset="1890">
-          <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.30783582" vertical-offset="795" max-vertical-offset="1830">
+          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
           <folding />
         </state>
       </provider>
