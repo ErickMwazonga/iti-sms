@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="073a501b-af85-441a-bef0-cc98ea5a032e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sms_app/settings.py" afterPath="$PROJECT_DIR$/sms_app/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/views.py" afterPath="$PROJECT_DIR$/send_sms/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sms_app.iws" />
@@ -40,11 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_sms/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2213" max-vertical-offset="2595">
-              <caret line="161" column="32" selection-start-line="161" selection-start-column="32" selection-end-line="161" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.30517712" vertical-offset="2228" max-vertical-offset="2610">
+              <caret line="163" column="61" selection-start-line="163" selection-start-column="61" selection-end-line="163" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -80,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sms_app/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3678474" vertical-offset="195" max-vertical-offset="1800">
+            <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1800">
               <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
               <folding />
             </state>
@@ -131,12 +131,12 @@
         <option value="$PROJECT_DIR$/send_sms/templates/sendsms2.html" />
         <option value="$PROJECT_DIR$/send_sms/templates/sandbox.html" />
         <option value="$PROJECT_DIR$/sms_app/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/send_sms/views.py" />
         <option value="$PROJECT_DIR$/send_sms/templates/editcontact.html" />
         <option value="$PROJECT_DIR$/send_sms/urls.py" />
         <option value="$PROJECT_DIR$/send_sms/templates/contacts.html" />
         <option value="$PROJECT_DIR$/send_sms/templates/editgroup.html" />
         <option value="$PROJECT_DIR$/sms_app/settings.py" />
+        <option value="$PROJECT_DIR$/send_sms/views.py" />
       </list>
     </option>
   </component>
@@ -517,12 +517,6 @@
       <option name="number" value="Default" />
       <updated>1431133196563</updated>
     </task>
-    <task id="LOCAL-00018" summary="import jquery">
-      <created>1432085706642</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1432085706642</updated>
-    </task>
     <task id="LOCAL-00019" summary="1st attemp on close add contacts">
       <created>1432086151294</created>
       <option name="number" value="00019" />
@@ -811,7 +805,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432325748889</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="debug = true for testing">
+      <created>1432325918029</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1432325918029</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -876,7 +876,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="testing seperate to and contact form fields fixed id reference in &lt;script&gt;" />
     <MESSAGE value="testing seperate to and contact form fields, removed the onlick in &lt;script&gt;" />
     <MESSAGE value="rm test code" />
     <MESSAGE value="Fix Settings.py" />
@@ -901,7 +900,8 @@
     <MESSAGE value="new login template to sandbox" />
     <MESSAGE value="move new longin from sandbox to /" />
     <MESSAGE value="Creating edit group form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating edit group form" />
+    <MESSAGE value="debug = true for testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug = true for testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1241,30 +1241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sms_app/locla_settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/send_sms/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/send_sms/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2138" max-vertical-offset="2595">
-          <caret line="161" column="32" selection-start-line="161" selection-start-column="32" selection-end-line="161" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/editcontact.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5685131" vertical-offset="0" max-vertical-offset="390">
@@ -1281,6 +1257,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sms_app/locla_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/send_sms/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/editgroup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="465">
@@ -1291,8 +1283,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sms_app/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3678474" vertical-offset="195" max-vertical-offset="1800">
+        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1800">
           <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/send_sms/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30517712" vertical-offset="2228" max-vertical-offset="2610">
+          <caret line="163" column="61" selection-start-line="163" selection-start-column="61" selection-end-line="163" selection-end-column="61" />
           <folding />
         </state>
       </provider>

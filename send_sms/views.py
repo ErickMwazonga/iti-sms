@@ -161,6 +161,7 @@ def deleteTemplate(request, templateID):
 @login_required
 def editGroup(request, groupID):
     group = contactgroup.objects.filter(user=request.user).get(id=groupID)
+    contact_list = contacts.objects.filter(user=request.user)
     form = AddContactToGroupForm(request.POST or None, instance=group)
     if form.is_valid():
         save_it = form.save(commit=False)
