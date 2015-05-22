@@ -7,7 +7,7 @@
     	{% for message in messages %}
     		{{ message }}
    		{% endfor %}
-   	</div>	
+   	</div>
 </div>
 {% endif %}
 <!-- END THIS IS FOR SUCCESS MESSAGES -->
@@ -32,7 +32,7 @@
     </table>
     <div class="pagination_messages">
     <ul class="pagination ct-blue">
-        {% if active > 0 %} 
+        {% if active > 0 %}
         <li><a href="/contacts/{{active|add:'-1'}}">&laquo;</a></li>
         {% endif %}
         {% for p in pages %}
@@ -45,7 +45,7 @@
         {% if active < pages|length|add:'-1' %}
         <li><a href="/contacts/{{active|add:'1'}}">&raquo;</a></li>
         {% endif %}
-       
+
     </ul>
 </div>
     <h3>Ajouter des contacts</h3>
@@ -77,22 +77,24 @@
     <form method="POST" action="">
         {% csrf_token %}
         {{ groupForm.as_p }}
-        <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-          Contacts
-          <span class="caret"></span>
-        </button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-            {% for contact in contact_list %}
-              <li role="presentation">
-                <input type="checkbox" id="c_chooser" name="checks[]" value="{{contact.phoneNumber}}">
-                <label for="c_chooser" >{{contact.firstName}} {{contact.lastName}}</label>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
+            <select id="multiselect-contacts" multiple="multiple" name="checks[]">
+                {% for contact in contact_list %}
+                    <option value="{{ contact.phoneNumber }}">{{ contact.firstname }} {{ contact.lastName }}</option>
+                {% endfor %}
+            </select>
         <br>
         <input type="submit" value="Ajouter Groupe" class="btn btn-primary" />
         <input type="reset" value="Effacer" class="btn btn-danger" />
     </form>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#multiselect-contacts').multiselect({
+                nonSelectedText: 'Add Contacts',
+                disableIfEmpty: true,
+                maxHeight: 200,
+                enableCaseInsensitiveFiltering: true
+            });
+        });
+</script>
 {% endblock %}
