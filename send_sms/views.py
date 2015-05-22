@@ -157,6 +157,12 @@ def deleteTemplate(request, templateID):
     template.delete()
     return redirect('/template/')
 
+@login_required
+def deleteGroup(request, groupID):
+    group = contactgroup.objects.filter(user=request.user).get(id=groupID)
+    group.delete()
+    return redirect('/contacts/0')
+
 
 @login_required
 def editGroup(request, groupID):
