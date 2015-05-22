@@ -14,5 +14,5 @@ urlpatterns = patterns('',
     url(r'^template/(?P<templateID>[0-9]+)$', 'send_sms.views.editTemplate', name='EditTemplate'),
     url(r'^template/delete/(?P<templateID>[0-9]+)$', 'send_sms.views.deleteTemplate', name='DeleteTemplate'),
 
-    url(r'^sandbox/(?P<page>[0-9]+)$', 'send_sms.views.sandbox', name='DeleteTemplate'),
+    url(r'^sandbox/$',  'send_sms.views.sandbox', name='Login'),
 )

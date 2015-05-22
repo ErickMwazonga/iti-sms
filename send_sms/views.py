@@ -158,32 +158,6 @@ def deleteTemplate(request, templateID):
     return redirect('/template/')
 
 @login_required
-def sandbox(request, page):
-    contact_list = contacts.objects.filter(user=request.user)
-    form = AddContactForm(request.POST or None)
-    if form.is_valid():
-        save_it = form.save(commit=False)
-        save_it.user = request.user
-        save_it.save()
-        messages.success(request, 'Contact Saved')
-        return HttpResponseRedirect('')
-
-    contact_group = contactgroup.objects.filter(user=request.user)
-    groupForm = AddContactToGroupForm(request.POST or None)
-    if groupForm.is_valid():
-        cg = contactgroup()
-        cg.user = request.user
-        cg.groupName = groupForm.cleaned_data['groupName']
-        checklist = request.POST.getlist('checks[]')
-        cg.save()
-        for num in checklist:
-            c = contacts.objects.filter(user=request.user).get(phoneNumber=num)
-            cg.contact.add(c)
-        return HttpResponseRedirect('')
-    active = int(page)
-    pagesize = 10
-    pages = range(((len(contact_list) - 1) / pagesize) + 1)
-    contacts_pag = contact_list[active * pagesize: (active * pagesize) + pagesize]
-    pg = ['', '', 'active']
+def sandbox(request):
     template = "sandbox.html"
     return render_to_response(template, locals(), context_instance=RequestContext(request))
