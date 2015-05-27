@@ -22,6 +22,7 @@
                 <p>{{ form.message.label }}</p>
                 <textarea type="text" class="form-control" id="id_message" name="message" rows="10"></textarea>
                 <br />
+                <div>
                 <button class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">Templates<span class="caret"></span></button>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
                         <label>Templates</label>
@@ -36,6 +37,7 @@
                             <a href="/template/" class="list-group-item">Creer un Template</a>
                         </li>
                     </ul>
+                </div>
                </div>
             <br>
             {% for d_obj in device_obj %}
@@ -45,8 +47,8 @@
             {% endfor %}
             <input type="submit" value="Envoyer" class="btn btn-primary">
             <input type="reset"  value="Effacer" class="btn btn-danger">
+        </div>
         </form>
-    </div>
     <div class="col-xs-6 col-lg-4">
     </div>
     <script type="text/javascript">
