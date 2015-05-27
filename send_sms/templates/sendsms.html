@@ -21,8 +21,8 @@
                     </select><br /><br/>
                 <p>{{ form.message.label }}</p>
                 <textarea type="text" class="form-control" id="id_message" name="message" rows="10"></textarea>
-                <div class="input-group-btn">
-                    <button class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">Templates<span class="caret"></span></button>
+                <br />
+                <button style="margin-left: 10px; "class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">Templates<span class="caret"></span></button>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
                         <label>Templates</label>
                         {% for template in template_list %}
@@ -37,7 +37,6 @@
                         </li>
                     </ul>
                </div>
-            </div>
             <br>
             {% for d_obj in device_obj %}
                 {% if username == d_obj.user.username %}
