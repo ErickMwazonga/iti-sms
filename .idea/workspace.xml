@@ -53,8 +53,8 @@
       <file leaf-file-name="sendsms.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25438598" vertical-offset="903" max-vertical-offset="1695">
-              <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.5614035" vertical-offset="1353" max-vertical-offset="1695">
+              <caret line="100" column="105" selection-start-line="100" selection-start-column="105" selection-end-line="100" selection-end-column="105" />
               <folding />
             </state>
           </provider>
@@ -491,12 +491,6 @@
       <option name="number" value="Default" />
       <updated>1431133196563</updated>
     </task>
-    <task id="LOCAL-00037" summary="add enableCaseInsensitiveFiltering: true">
-      <created>1432244883411</created>
-      <option name="number" value="00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1432244883411</updated>
-    </task>
     <task id="LOCAL-00038" summary="fixing style of form fields">
       <created>1432245311971</created>
       <option name="number" value="00038" />
@@ -785,7 +779,13 @@
       <option name="project" value="LOCAL" />
       <updated>1432688358930</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="adding placeholders">
+      <created>1432688770396</created>
+      <option name="number" value="00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1432688770396</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -873,7 +873,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="edit no selected text on groups multiselect" />
     <MESSAGE value="remove default of auto selected radio buttons" />
     <MESSAGE value="viewContact to sandbox for dev" />
     <MESSAGE value="debug=TRUE for testing" />
@@ -898,7 +897,8 @@
     <MESSAGE value="styleing template button" />
     <MESSAGE value="styling template button" />
     <MESSAGE value="widen contacts dropdown" />
-    <option name="LAST_COMMIT_MESSAGE" value="widen contacts dropdown" />
+    <MESSAGE value="adding placeholders" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding placeholders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1288,8 +1288,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25438598" vertical-offset="903" max-vertical-offset="1695">
-          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.5614035" vertical-offset="1353" max-vertical-offset="1695">
+          <caret line="100" column="105" selection-start-line="100" selection-start-column="105" selection-end-line="100" selection-end-column="105" />
           <folding />
         </state>
       </provider>
