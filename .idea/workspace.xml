@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="073a501b-af85-441a-bef0-cc98ea5a032e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/templates/contacts.html" afterPath="$PROJECT_DIR$/send_sms/templates/contacts.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/send_sms/templates/sendsms.html" afterPath="$PROJECT_DIR$/send_sms/templates/sendsms.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -54,8 +53,8 @@
       <file leaf-file-name="sendsms.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1620">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.39473686" vertical-offset="330" max-vertical-offset="1650">
+              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -518,18 +517,6 @@
       <option name="number" value="Default" />
       <updated>1431133196563</updated>
     </task>
-    <task id="LOCAL-00042" summary="Add label">
-      <created>1432247031723</created>
-      <option name="number" value="00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1432247031723</updated>
-    </task>
-    <task id="LOCAL-00043" summary="add spacing to send-sms template">
-      <created>1432247310525</created>
-      <option name="number" value="00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1432247310525</updated>
-    </task>
     <task id="LOCAL-00044" summary="fix template dir">
       <created>1432247783554</created>
       <option name="number" value="00044" />
@@ -812,7 +799,19 @@
       <option name="project" value="LOCAL" />
       <updated>1432693810175</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="add spacing in contacts template&#10;place template button inline on send-sms">
+      <created>1432696925627</created>
+      <option name="number" value="00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1432696925627</updated>
+    </task>
+    <task id="LOCAL-00092" summary="fix error where all fields dopdwon">
+      <created>1432697042702</created>
+      <option name="number" value="00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1432697042703</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -846,6 +845,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1377551" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -856,7 +856,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3993232" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -900,8 +899,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="multiselect customoptions" />
-    <MESSAGE value="push multiselect to contacts page" />
     <MESSAGE value="new login template to sandbox" />
     <MESSAGE value="move new longin from sandbox to /" />
     <MESSAGE value="Creating edit group form" />
@@ -925,7 +922,9 @@
     <MESSAGE value="removing default text" />
     <MESSAGE value="add glyphicon" />
     <MESSAGE value="remove container fluid" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove container fluid" />
+    <MESSAGE value="add spacing in contacts template&#10;place template button inline on send-sms" />
+    <MESSAGE value="fix error where all fields dopdwon" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix error where all fields dopdwon" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1310,8 +1309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/send_sms/templates/sendsms.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1620">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.39473686" vertical-offset="330" max-vertical-offset="1650">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
           <folding />
         </state>
       </provider>
