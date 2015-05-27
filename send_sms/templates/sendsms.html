@@ -7,7 +7,7 @@
             {% csrf_token %}
             <p>{{ form.phoneNumber.label }}</p>
             <div class="">
-                <input type="text" class="form-control" id="id_phoneNumber" name="phoneNumber" placeholder=""><br />
+                <input type="text" class="form-control" id="id_phoneNumber" name="phoneNumber" placeholder="Entrez le numero de telephone ici ou selectionnez les contacts ci-dessous"><br />
                     <select class="form-control" id="contacts" multiple="multiple">
                         {% for c_obj in contact_list %}
                             <option value="{{ c_obj.phoneNumber }}">{{ c_obj.firstName }} {{ c_obj.lastName }}</option>
@@ -20,7 +20,7 @@
                         {% endfor %}
                     </select><br /><br/>
                 <p>{{ form.message.label }}</p>
-                <textarea type="text" class="form-control" id="id_message" name="message" rows="10"></textarea>
+                <textarea type="text" class="form-control" id="id_message" name="message" rows="10" placeholder="Entrez le message ou choisissez un template"></textarea>
                 <br />
                 <div>
                 <button class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">Templates<span class="caret"></span></button>
@@ -54,14 +54,14 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#contacts').multiselect({
-                nonSelectedText: 'Add Contacts',
+                nonSelectedText: 'Ajoutez Contact',
                 disableIfEmpty: true,
                 maxHeight: 200,
-                buttonWidth: '400px',
+                buttonWidth: '220px',
                 enableCaseInsensitiveFiltering: true
             });
             $('#groups').multiselect({
-                nonSelectedText: 'Add Groupes',
+                nonSelectedText: 'Ajoutez Groupe',
                 disableIfEmpty: true,
                 maxHeight: 200
             });
