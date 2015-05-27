@@ -29,6 +29,7 @@
                     <input type="hidden" name="deviceID" id="id_deviceID" value="{{ d_obj.deviceID }}">
                 {% endif %}
             {% endfor %}
+            <div class="btn-group">
                 <button class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">Templates<span class="caret"></span></button>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
                         <label>Templates</label>
@@ -45,6 +46,7 @@
                     </ul>
                 <input type="submit" value="Envoyer" class="btn btn-primary">
                 <input type="reset"  value="Effacer" class="btn btn-danger">
+            </div>
         </form>
         </div>
     <div class="col-xs-6 col-lg-4">
