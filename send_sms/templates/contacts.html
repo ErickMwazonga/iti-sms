@@ -47,6 +47,7 @@
         {% endif %}
     </ul>
     <hr />
+    <br />
 </div>
     <h3>Ajouter des contacts</h3>
      <form method="POST" action="">
@@ -55,7 +56,9 @@
     	<input type="submit" value="Ajouter Contact" class="btn btn-primary" />
     	<input type="reset"  value="Effacer" class="btn btn-danger" />
     </form>
+    <br />
     <hr />
+    <br />
 
     <h3>Groupes des contacts</h3>
     <table class="table table-bordered table-hover">
@@ -76,7 +79,9 @@
         {% endfor %}
         </tbody>
     </table>
+    <br />
     <hr />
+    <br />
     <form method="POST" action="">
         {% csrf_token %}
         {{ groupForm.as_p }}
