@@ -45,8 +45,8 @@
         {% if active < pages|length|add:'-1' %}
         <li><a href="/contacts/{{active|add:'1'}}">&raquo;</a></li>
         {% endif %}
-
     </ul>
+    <hr />
 </div>
     <h3>Ajouter des contacts</h3>
      <form method="POST" action="">
@@ -55,8 +55,8 @@
     	<input type="submit" value="Ajouter Contact" class="btn btn-primary" />
     	<input type="reset"  value="Effacer" class="btn btn-danger" />
     </form>
-    <br />
-    <br />
+    <hr />
+
     <h3>Groupes des contacts</h3>
     <table class="table table-bordered table-hover">
         <thead>
@@ -76,6 +76,7 @@
         {% endfor %}
         </tbody>
     </table>
+    <hr />
     <form method="POST" action="">
         {% csrf_token %}
         {{ groupForm.as_p }}

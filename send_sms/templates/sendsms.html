@@ -7,7 +7,7 @@
             {% csrf_token %}
             <p>{{ form.phoneNumber.label }}</p>
             <div class="">
-                <input type="text" class="form-control" id="id_phoneNumber" name="phoneNumber"><br />
+                <input type="text" class="form-control" id="id_phoneNumber" name="phoneNumber" placeholder=""><br />
                     <select class="form-control" id="contacts" multiple="multiple">
                         {% for c_obj in contact_list %}
                             <option value="{{ c_obj.phoneNumber }}">{{ c_obj.firstName }} {{ c_obj.lastName }}</option>
@@ -21,7 +21,22 @@
                     </select><br /><br/>
                 <p>{{ form.message.label }}</p>
                 <textarea type="text" class="form-control" id="id_message" name="message" rows="10"></textarea>
-
+                <div class="input-group-btn">
+                    <button class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">Templates<span class="caret"></span></button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                        <label>Templates</label>
+                        {% for template in template_list %}
+                            <li role="presentation">
+                                <a href="#"  onclick="addtemplate('{{template.msgText}}')"
+                                value="{{template.msgText}}" >{{template.name}}</a>
+                            </li>
+                        {% endfor %}
+                        <label>Creer un Nouveau</label>
+                        <li role="presentation">
+                            <a href="/template/" class="list-group-item">Creer un Template</a>
+                        </li>
+                    </ul>
+               </div>
             </div>
             <br>
             {% for d_obj in device_obj %}
