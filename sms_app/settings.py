@@ -103,11 +103,10 @@ TEMPLATE_DIRS =(
     '/home/ubuntu/tahiti-sms.com/iti_sms/iti-sms/send_sms/templates/',
 )
 
-#Login/Logout
+#Login
 LOGIN_URL = '/'
 LOGIN_REDIRECT_URL = '/messages/0'
 
-# LOGOUT_URL = '/logout/'
 
 try:
     from sms_app.locla_settings import *

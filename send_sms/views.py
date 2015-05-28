@@ -44,7 +44,7 @@ def sendSMS(request):
         return redirect('/messages/0')
     username = request.user.username
     device_obj = device.objects.all()
-    contact_list = contacts.objects.filter(user=request.user)
+    contact_list = contacts.objects.filter(user=request.user).order_by('firstName')
     group_list = contactgroup.objects.filter(contact__user=request.user).distinct()
     template_list = msgTemplates.objects.filter(user=request.user).distinct()
     context = {"form": form}
@@ -81,7 +81,7 @@ def getMessages(request, page):
 
 @login_required
 def viewContact(request, page):
-    contact_list = contacts.objects.filter(user=request.user)
+    contact_list = contacts.objects.filter(user=request.user).order_by('firstName')
     form = AddContactForm(request.POST or None)
     if form.is_valid():
         save_it = form.save(commit=False)

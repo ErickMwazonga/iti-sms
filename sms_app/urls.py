@@ -6,5 +6,4 @@ from django.contrib import admin
 urlpatterns = patterns('',
     url(r'^', include('send_sms.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    # url(r'autocomplete/', include('autocomplete_light.urls')),
 )
