@@ -87,7 +87,7 @@
         {{ groupForm.as_p }}
             <select id="multiselect-contacts" multiple="multiple" name="checks[]">
                 {% for contact in contact_list %}
-                    <option value="{{ contact.phoneNumber }}">{{ contact.firstname }} {{ contact.lastName }}</option>
+                    <option value="{{ contact.phoneNumber }}">{{ contact.firstName }} {{ contact.lastName }}</option>
                 {% endfor %}
             </select>
         <br />

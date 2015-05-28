@@ -45,7 +45,7 @@ def sendSMS(request):
     username = request.user.username
     device_obj = device.objects.all()
     contact_list = contacts.objects.filter(user=request.user).order_by('firstName')
-    group_list = contactgroup.objects.filter(contact__user=request.user).distinct()
+    group_list = contactgroup.objects.filter(contact__user=request.user).distinct().order_by('groupName')
     template_list = msgTemplates.objects.filter(user=request.user).distinct()
     context = {"form": form}
     template = "sendsms.html"
@@ -90,7 +90,7 @@ def viewContact(request, page):
         messages.success(request, 'Contact Saved')
         return HttpResponseRedirect('')
 
-    contact_group = contactgroup.objects.filter(user=request.user)
+    contact_group = contactgroup.objects.filter(user=request.user).order_by('groupName')
     groupForm = AddContactToGroupForm(request.POST or None)
     if groupForm.is_valid():
         cg = contactgroup()
