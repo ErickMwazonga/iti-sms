@@ -35,13 +35,13 @@
         {% if active > 0 %}
         <li><a href="/contacts/{{active|add:'-1'}}">&laquo;</a></li>
         {% endif %}
-        {% for p in pages %}
-            {% if active == p %}
-                <li class="active"><a href="/contacts/{{p}}">{{p|add:"1"}}</a></li>
-            {% else %}
-                <li><a href="/contacts/{{p}}">{{p|add:"1"}}</a></li>
-            {% endif %}
-        {% endfor %}
+{#        {% for p in pages %}#}
+{#            {% if active == p %}#}
+{#                <li class="active"><a href="/contacts/{{p}}">{{p|add:"1"}}</a></li>#}
+{#            {% else %}#}
+{#                <li><a href="/contacts/{{p}}">{{p|add:"1"}}</a></li>#}
+{#            {% endif %}#}
+{#        {% endfor %}#}
         {% if active < pages|length|add:'-1' %}
         <li><a href="/contacts/{{active|add:'1'}}">&raquo;</a></li>
         {% endif %}
