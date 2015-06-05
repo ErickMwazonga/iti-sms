@@ -11,6 +11,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 #lib
 import json
 import ast
+import HTMLParser
 
 #local
 from functions import *
@@ -24,11 +25,10 @@ from .forms import SendMsgForm, AddContactForm, AddContactToGroupForm, createTem
 @login_required
 def sendSMS(request):
     form = SendMsgForm(request.POST or None)
+    gateway = SmsGateway()
     if form.is_valid():
         number = form.cleaned_data['phoneNumber']
-        # selected_contacts = request.POST.getlist['contacts']
         number_list = number.split(",")
-        # number_list.append(selected_contacts)
         message = form.cleaned_data['message']
         deviceID = request.POST.get('deviceID')
         device_obj = device.objects.all()
@@ -37,7 +37,6 @@ def sendSMS(request):
                 for num in number_list:
                     accountEmail = d_obj.accountEmail
                     accountPassword = d_obj.accountPassword
-                    gateway = SmsGateway()
                     gateway.loginDetails(accountEmail, accountPassword)
                     gateway.sendMessageToNumber(num, message, deviceID)
         messages.success(request, 'Message Envoye')
@@ -65,12 +64,13 @@ def getMessages(request, page):
         gateway.loginDetails(accountEmail, accountPassword)
         json_string = gateway.getMessages()
     for msg in json_string['response']['result']:
+        msg_encoded = HTMLParser.HTMLParser().unescape(msg['message'])
         msgs.append({
             "status": msg['status'],
             "sent_at": msg['sent_at'],
             "received_at": msg['received_at'],
             "contact_number": msg['contact']['number'],
-            "message": msg['message']})
+            "message": msg_encoded})
     pagesize = 10
     pages = range(((len(msgs) - 1) / pagesize) + 1)
     active = int(page)

@@ -31,7 +31,7 @@ class AddContactToGroupForm(forms.ModelForm):
 
 class SendMsgForm(forms.Form):
     phoneNumber = forms.CharField(label="Numero de Telephone", required=True, widget=forms.TextInput(attrs={'class': "form-control"}))
-    message = forms.CharField(required=True, widget=forms.Textarea(attrs={'class': "form-control", 'maxlength': "160"}))
+    message = forms.CharField(required=True, widget=forms.Textarea(attrs={'class': "form-control"}))
 
 
 class createTemplateForm(forms.ModelForm):
