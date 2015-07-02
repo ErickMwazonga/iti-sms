@@ -12,11 +12,12 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import json
 import ast
 import HTMLParser
+import datetime
 
 #local
 from functions import *
-from models import contacts, contactgroup, device, User, msgTemplates
-from .forms import SendMsgForm, AddContactForm, AddContactToGroupForm, createTemplateForm
+from models import contacts, contactgroup, device, User, msgTemplates, adminUser, message, userType
+from .forms import SendMsgForm, AddContactForm, AddContactToGroupForm, createTemplateForm, SaveMsgForm
 
 # Create your views here.
 
@@ -25,6 +26,7 @@ from .forms import SendMsgForm, AddContactForm, AddContactToGroupForm, createTem
 @login_required
 def sendSMS(request):
     form = SendMsgForm(request.POST or None)
+    form2 = SaveMsgForm()
     gateway = SmsGateway()
     if form.is_valid():
         number = form.cleaned_data['phoneNumber']
@@ -39,6 +41,11 @@ def sendSMS(request):
                     accountPassword = d_obj.accountPassword
                     gateway.loginDetails(accountEmail, accountPassword)
                     gateway.sendMessageToNumber(num, message, deviceID)
+                    save_it = form2.save(commit=False)
+                    save_it.user = request.user
+                    save_it.sentTo = num
+                    save_it.msgText = message
+                    save_it.save()
         messages.success(request, 'Message Envoye')
         return redirect('/messages/0')
     username = request.user.username
@@ -65,12 +72,13 @@ def getMessages(request, page):
         json_string = gateway.getMessages()
     for msg in json_string['response']['result']:
         msg_encoded = HTMLParser.HTMLParser().unescape(msg['message'])
-        msgs.append({
-            "status": msg['status'],
-            "sent_at": msg['sent_at'],
-            "received_at": msg['received_at'],
-            "contact_number": msg['contact']['number'],
-            "message": msg_encoded})
+        if msg['status'] != 'manual send':
+            msgs.append({
+                "status": msg['status'],
+                "sent_at": msg['sent_at'],
+                "received_at": msg['received_at'],
+                "contact_number": msg['contact']['number'],
+                "message": msg_encoded})
     pagesize = 10
     pages = range(((len(msgs) - 1) / pagesize) + 1)
     active = int(page)
@@ -175,6 +183,48 @@ def editGroup(request, groupID):
         save_it.save()
         return redirect('/contacts/0')
     return render_to_response('editgroup.html', locals(), context_instance=RequestContext(request))
+
+
+@login_required()
+def usageStats(request):
+    usrType = userType.objects.filter(user=request.user)
+    for usr in usrType:
+        if usr.id == request.user.id:
+            if usr.userType == 1:
+                return HttpResponseRedirect('/messages/0')
+    msgs = []
+    masterUsr = adminUser.objects.all()
+    for usr in masterUsr:
+        if usr.id == request.user.id:
+            for subUsr in usr.subUser.all():
+                subUsrMsgs = message.objects.filter(user=subUsr)
+                numMsgs = len(subUsrMsgs)
+                nested = []
+                msgs.append(nested)
+                for subUsrMsg in subUsrMsgs:
+                    nested.append([subUsr.username,[subUsrMsg.sentTo, subUsrMsg.msgText], numMsgs])
+
+    return render_to_response('stats.html', locals(), context_instance=RequestContext(request))
+
+
+@login_required()
+def analytics(request):
+    phone = device.objects.filter(user=request.user)
+    month = int(request.GET.get('month'))
+    year = int(request.GET.get('year'))
+    for device_obj in phone:
+        gateway = SmsGateway()
+        accountEmail = device_obj.accountEmail
+        accountPassword = device_obj.accountPassword
+        gateway.loginDetails(accountEmail, accountPassword)
+        json_string = gateway.getMessages()
+        count = 0
+        for msg in json_string['response']['result']:
+            if msg['status'] == 'sent':
+                sentTime = datetime.datetime.fromtimestamp(msg['sent_at'])
+                if month==sentTime.month and year==sentTime.year:
+                    count+=1
+    return render_to_response('analytics.html', locals(), context_instance=RequestContext(request))
 
 # @login_required
 # def sandbox(request):

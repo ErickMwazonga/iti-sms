@@ -24,8 +24,26 @@ class ContactGroupAdmin(admin.ModelAdmin):
     filter_horizontal = ('contact',)
 
 
+class MessageAdmin(admin.ModelAdmin):
+    list_display = ('user', 'sentTo', )
+    list_filter = ('user',)
+
+
+class UserTypeAdmin(admin.ModelAdmin):
+    list_display = ('user', 'userType')
+    list_filter = ('userType',)
+
+
+class AdminUserAdmin(admin.ModelAdmin):
+    list_display = ('masterUser',)
+    list_filter = ('masterUser',)
+    filter_horizontal = ('subUser',)
+
 admin.site.register(device, DeviceAdmin)
 admin.site.register(msgTemplates, )
 admin.site.register(contactgroup, ContactGroupAdmin)
 admin.site.register(contacts, ContactsAdmin)
 admin.site.register(Permission)
+admin.site.register(userType, UserTypeAdmin)
+admin.site.register(adminUser, AdminUserAdmin)
+admin.site.register(message, MessageAdmin)

@@ -34,6 +34,11 @@ class SendMsgForm(forms.Form):
     message = forms.CharField(required=True, widget=forms.Textarea(attrs={'class': "form-control"}))
 
 
+class SaveMsgForm(forms.ModelForm):
+    class Meta:
+        model = message
+
+
 class createTemplateForm(forms.ModelForm):
     class Meta:
         model = msgTemplates

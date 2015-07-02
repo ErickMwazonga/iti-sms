@@ -41,3 +41,28 @@ class msgTemplates(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class message(models.Model):
+    user = models.ForeignKey(User)
+    sentTo = models.CharField(max_length=10, null=False, blank=False)
+    msgText = models.TextField(null=False, blank=False)
+
+    def __unicode__(self):
+        return self.user.username
+
+
+USER_TYPES = ((0, 'Admin'), (1, 'Sub User'))
+class userType(models.Model):
+    user = models.ForeignKey(User)
+    userType = models.IntegerField(choices=USER_TYPES, default=1)
+
+    def __unicode__(self):
+        return self.user.username
+
+class adminUser(models.Model):
+    masterUser = models.ForeignKey(User, related_name='Master')
+    subUser = models.ManyToManyField(User, related_name='Sub')
+
+    def __unicode__(self):
+        return self.masterUser.username
