@@ -210,8 +210,11 @@ def usageStats(request):
 @login_required()
 def analytics(request):
     phone = device.objects.filter(user=request.user)
-    month = int(request.GET.get('month'))
-    year = int(request.GET.get('year'))
+    month = request.GET.get('month') or None
+    year = request.GET.get('year') or None
+    if month != None and year != None:
+        month = int(month)
+        year = int(year)
     for device_obj in phone:
         gateway = SmsGateway()
         accountEmail = device_obj.accountEmail
@@ -224,6 +227,8 @@ def analytics(request):
                 sentTime = datetime.datetime.fromtimestamp(msg['sent_at'])
                 if month==sentTime.month and year==sentTime.year:
                     count+=1
+                    saving = count*145
+
     return render_to_response('analytics.html', locals(), context_instance=RequestContext(request))
 
 # @login_required

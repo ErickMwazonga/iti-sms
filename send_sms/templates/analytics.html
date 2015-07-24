@@ -24,7 +24,12 @@
                 <input type="submit" class="form-control btn btn-lg btn-primary" value="Go">
             </form>
         </div>
-        <div class="col-md-4">it is {{ month }} {{ year }}</div>
-        <div class="col-md-4">{{ count }} {{ test }}</div>
+        <div class="col-md-4">
+            <p>In the Month {{ month }}/{{ year }} you sent {{ count }} Messages</p>
+        </div>
+        <div class="col-md-4">
+            <p>{{ count }} Messages is approx {{ saving }}XPF</p>
+            <p>This Month you saved {{ saving }}XPF</p>
+        </div>
     </div>
 {% endblock%}
