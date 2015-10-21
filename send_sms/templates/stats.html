@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for subusr in msgs %}
+        <p>Messages sent from <b>{{ subusr.1.0}}'s</b> Account</p>
+        <p>Total msgs sent {{ subusr.1.2 }}</p>
+        <table class="table table-bordered table-hover table-striped">
+            <tr>
+                <th>To</th>
+                <th>Message</th>
+            </tr>
+            {% for msg in subusr %}
+                    <tr>
+                        <td>{{ msg.1.0 }}</td>
+                        <td>{{ msg.1.1 }}</td>
+                    </tr>
+            {% endfor %}
+        </table>
+    {% endfor %}
+{#    {% debug %}#}
+{% endblock %}

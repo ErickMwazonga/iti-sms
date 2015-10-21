@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+{% load timetags %}
+<!-- THIS IS FOR SUCCESS MESSAGES -->
+{% if messages %}
+<div class="alert alert-success" xmlns="http://www.w3.org/1999/html">
+	<div class="container">
+    	{% for message in messages %}
+    		{{ message }}
+   		{% endfor %}
+   	</div>	
+</div>
+{% endif %}
+<!-- END THIS IS FOR SUCCESS MESSAGES -->
+<p>{{ accountID }}</p>
+    <h3>Vos Messages</h3>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+        	<tr>
+            	<th>Statut</th>
+            	<th>Envoyer</th>
+            	<th>Reçu</th>
+                <th>Contact</th>
+            	<th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+	{% for msg in msgs %}
+            <tr>
+                <td>{{ msg.status }}</td>
+                <td>{{ msg.sent_at|print_timestamp }}</td>
+            	<td>{{ msg.received_at|print_timestamp }}</td>
+                <td>{% for c_obj in contact_obj %}
+                    {% if msg.contact_number == c_obj.phoneNumber %}
+                        {{ c_obj.firstName }} {{ c_obj.lastName }} -
+                    {% endif %}
+                {% endfor %}
+                {{ msg.contact_number }}</td>
+                <td>{{ msg.message }}</td>
+            </tr>
+    {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagination_messages">
+    	<ul class="pagination ct-blue">
+			{% if active > 0 %} 
+  			<li><a href="/messages/{{active|add:'-1'}}">&laquo;</a></li>
+			{% endif %}
+{#			{% for p in pages %}#}
+{#				{% if active == p %}#}
+{#  					<li class="active"><a href="/messages/{{p}}">{{p|add:"1"}}</a></li>#}
+{#				{% else %}#}
+{#					<li><a href="/messages/{{p}}">{{p|add:"1"}}</a></li>#}
+{#				{% endif %}#}
+{#			{% endfor %}#}
+			{% if active < pages|length|add:'-1' %}
+  			<li class="active"><a href="/messages/{{active|add:'1'}}">&raquo;</a></li>
+			{% endif %}
+		</ul>
+	</div>
+{% endblock %}
