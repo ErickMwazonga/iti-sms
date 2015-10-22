@@ -1,1 +1,2 @@
 *.pyc
+/sms_app/settings.py
