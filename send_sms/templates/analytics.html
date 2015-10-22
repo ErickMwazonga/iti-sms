@@ -4,32 +4,32 @@
         <div class="col-md-4">
             <form action="" method="get">
                 <select class="form-control" name="month" id="month">
-                    <option value="1">Jan</option>
-                    <option value="2">Feb</option>
-                    <option value="3">March</option>
-                    <option value="4">Apr</option>
-                    <option value="5">May</option>
-                    <option value="6">Jun</option>
-                    <option value="7">Jul</option>
-                    <option value="8">Aug</option>
-                    <option value="9">Sept</option>
-                    <option value="10">Oct</option>
-                    <option value="11">Nov</option>
-                    <option value="12">Dec</option>
+                    <option value="1">Janvier</option>
+                    <option value="2">Février</option>
+                    <option value="3">Mars</option>
+                    <option value="4">Avril</option>
+                    <option value="5">Mai</option>
+                    <option value="6">Juin</option>
+                    <option value="7">Juillet</option>
+                    <option value="8">Août</option>
+                    <option value="9">Septembre</option>
+                    <option value="10">Octobre</option>
+                    <option value="11">Novembre</option>
+                    <option value="12">Décembre</option>
                 </select>
                 <select class="form-control" name="year" id="year">
                     <option value="2015" selected="true">2015</option>
 {#                    <option value="2016">2016</option>#}
                 </select>
-                <input type="submit" class="form-control btn btn-lg btn-primary" value="Go">
+                <input type="submit" class="form-control btn btn-lg btn-primary" value="Générer">
             </form>
         </div>
         <div class="col-md-4">
-            <p>In the Month {{ month }}/{{ year }} you sent {{ count }} Messages</p>
+            <p>Au mois de {{ month }}/{{ year }} vous avez envoyé {{ count }} SMS</p>
         </div>
         <div class="col-md-4">
-            <p>{{ count }} Messages is approx {{ saving }}XPF</p>
-            <p>This Month you saved {{ saving }}XPF</p>
+            <p>{{ count }} SMS envoyé = {{ saving }}XPF d'appels téléphoniques</p>
+            <p>Ce mois-ci vous avez économisé {{ saving }}XPF</p>
         </div>
     </div>
 {% endblock%}

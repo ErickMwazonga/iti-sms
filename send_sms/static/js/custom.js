@@ -7,10 +7,23 @@ $(window).scroll(function(e) {
     
 });
 
+addgroup = function(name) {
+	arr = name.split(', ');
+	for (var i = 0; i < arr.length; i++) {
+		num = arr[i].split(' - ')[1]
+		addcontact(parseInt(num));
+	}
+}
 
-autofill = function() {
-	console.log('wooroo');
-	//$.getJSON('/api/autofill', $('#id_phoneNumber').value), function(data) {
+addcontact = function(num) {
+	if ($('#id_phoneNumber').val() != ''){
+		$('#id_phoneNumber').val($('#id_phoneNumber').val() + ", " + num);
+	}
+	else{
+		$('#id_phoneNumber').val(num);
+	}
+}
 
-	//}
+addtemplate = function(template){
+    $('#id_message').val(template);
 }

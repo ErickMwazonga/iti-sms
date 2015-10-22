@@ -13,6 +13,7 @@ import json
 import ast
 import HTMLParser
 import datetime
+from text_unidecode import unidecode
 
 #local
 from functions import *
@@ -32,6 +33,7 @@ def sendSMS(request):
         number = form.cleaned_data['phoneNumber']
         number_list = number.split(",")
         message = form.cleaned_data['message']
+        message = unidecode(message)
         deviceID = request.POST.get('deviceID')
         device_obj = device.objects.all()
         for d_obj in device_obj:

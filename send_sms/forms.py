@@ -37,6 +37,7 @@ class SendMsgForm(forms.Form):
 class SaveMsgForm(forms.ModelForm):
     class Meta:
         model = message
+        fields = '__all__'
 
 
 class createTemplateForm(forms.ModelForm):
