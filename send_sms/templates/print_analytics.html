@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-4" align="center">
+            <h3>Au mois de {{ month }}/{{ year }}</h3>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                </div>
+            </div>
+            <div>
+                <span style="font-size:60px;"><i class="fa fa-envelope-o"></i></span>
+                <h2>{{ count }}</h2>
+                <h1>SMS ENVOYÉS</h1>
+            </div>
+        </div>
+        <div class="col-md-4" align="center">
+            <h3>{{ count }} appels téléphoniques</h3>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar progress-bar-success" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                </div>
+            </div>
+            <div>
+                <span style="font-size:80px;"><i class="fa fa-money"></i></span>
+                <h2><span style="color:#5cb85c;">{{ saving }} XPF</span></h2>
+                <h1>ÉCONOMISÉ</h1>
+            </div>
+        </div>
+         <div class="col-md-4" align="center">
+            <h3>Les économies totales</h3>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                </div>
+            </div>
+            <div>
+                <span style="font-size:60px;"><i class="fa fa-thumbs-o-up"></i></span>
+                <h2>{{ count_total }}</h2>
+                <h1><span style="font-size:20px;">SMS ENVOYÉS</span> - SOIT {{ saving_total }} XPF</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="padding-top:40px;">
+        <div class="col-md-3" align="center"></div>
+            <div class="col-md-6" align="center">
+                <div class="well well-sm">
+                    <i><span style="color:#909090;">Économies basés sur les Tarifs par minute(OPT) vers les mobiles/vini (24f). Un appel téléphonique moyenne est de 3 minutes. 1 appel = 96f</span></i>
+                </div>
+            </div>
+        <div class="col-md-3" align="center"></div>
+    </div>
+{% endblock%}

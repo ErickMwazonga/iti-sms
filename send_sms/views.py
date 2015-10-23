@@ -214,23 +214,32 @@ def analytics(request):
     phone = device.objects.filter(user=request.user)
     month = request.GET.get('month') or None
     year = request.GET.get('year') or None
-    if month != None and year != None:
-        month = int(month)
-        year = int(year)
-    for device_obj in phone:
-        gateway = SmsGateway()
-        accountEmail = device_obj.accountEmail
-        accountPassword = device_obj.accountPassword
-        gateway.loginDetails(accountEmail, accountPassword)
-        json_string = gateway.getMessages()
-        count = 0
-        for msg in json_string['response']['result']:
-            if msg['status'] == 'sent':
-                sentTime = datetime.datetime.fromtimestamp(msg['sent_at'])
-                if month==sentTime.month and year==sentTime.year:
-                    count+=1
-                    saving = count*145
-
+    if 'month' in request.GET: 
+        if month != None and year != None:
+            month = int(month)
+            year = int(year)
+        for device_obj in phone:
+            gateway = SmsGateway()
+            accountEmail = device_obj.accountEmail
+            accountPassword = device_obj.accountPassword
+            gateway.loginDetails(accountEmail, accountPassword)
+            json_string = gateway.getMessages()
+            count = 0
+            for msg in json_string['response']['result']:
+                if msg['status'] == 'sent':
+                    sentTime = datetime.datetime.fromtimestamp(msg['sent_at'])
+                    if month==sentTime.month and year==sentTime.year:
+                        count+=1
+                        saving = count*96
+            count_total = 0
+            for msg in json_string['response']['result']:
+                if msg['status'] == 'sent':
+                    count_total+=1
+                    saving_total = count_total*96
+                
+        return render_to_response('print_analytics.html', locals(), context_instance=RequestContext(request))
+        
+        
     return render_to_response('analytics.html', locals(), context_instance=RequestContext(request))
 
 # @login_required
