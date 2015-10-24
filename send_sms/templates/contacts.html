@@ -13,7 +13,7 @@
 <!-- END THIS IS FOR SUCCESS MESSAGES -->
 
 {% block content %}
-    <h3>Mes Contacts</h3>
+    <h4>Mes Contacts</h4>
     <table class="table table-bordered table-hover table-striped">
         <thead>
         <tr>
@@ -49,7 +49,7 @@
     <hr />
     <br />
 </div>
-    <h3>Ajouter des contacts</h3>
+    <h4>Ajouter des contacts</h4>
      <form method="POST" action="">
         {% csrf_token %}
         {{ form.as_p }}
@@ -60,7 +60,7 @@
     <hr />
     <br />
 
-    <h3>Groupes des contacts</h3>
+    <h4>Groupes des contacts</h4>
     <table class="table table-bordered table-hover">
         <thead>
         	<tr>

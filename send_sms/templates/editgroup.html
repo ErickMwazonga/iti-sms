@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <h3>Ajouter des Groupes</h3>
+    <h4>Ajouter des Groupes</h4>
     <form method="POST" action="">
         {% csrf_token %}
         {{ form.as_p }}
