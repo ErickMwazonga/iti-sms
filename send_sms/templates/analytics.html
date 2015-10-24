@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
+    <div class="row" style="padding-top:20px;">
+        <div class="col-md-6">
+            <div class="alert alert-info" role="alert">Choisissez un mois et une année ci-dessous et cliquez sur le bouton "Générer" pour créer votre rapport</div></div>
+        <div class="col-md-6"></div>
+    </div>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <form action="" method="get">
+                <p>
                 <select class="form-control" name="month" id="month">
                     <option value="1">Janvier</option>
                     <option value="2">Février</option>
@@ -17,19 +23,18 @@
                     <option value="11">Novembre</option>
                     <option value="12">Décembre</option>
                 </select>
+                </p>
+                <p>
                 <select class="form-control" name="year" id="year">
                     <option value="2015" selected="true">2015</option>
 {#                    <option value="2016">2016</option>#}
                 </select>
+                </p>
+                <p>
                 <input type="submit" class="form-control btn btn-lg btn-primary" value="Générer">
+                </p>
             </form>
         </div>
-        <div class="col-md-4">
-            <p>Au mois de {{ month }}/{{ year }} vous avez envoyé {{ count }} SMS</p>
-        </div>
-        <div class="col-md-4">
-            <p>{{ count }} SMS envoyé = {{ saving }}XPF d'appels téléphoniques</p>
-            <p>Ce mois-ci vous avez économisé {{ saving }}XPF</p>
-        </div>
+        <div class="col-md-6"></div>
     </div>
 {% endblock%}
