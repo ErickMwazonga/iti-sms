@@ -2,7 +2,7 @@
 {% load staticfiles %}
 {% block content %}
     <div class="col-xs-12 col-sm-6 col-lg-8">
-        <div class="alert alert-info" role="alert">Ajouter vos destinataires, écrivez votre message et et cliquez sur le bouton "Envoyer"</div>
+        <div class="alert alert-info" role="alert">Ajouter vos destinataires, écrivez votre message et cliquez sur le bouton "Envoyer"</div>
         <form method="POST" action="">
             {% csrf_token %}
             <p>{{ form.phoneNumber.label }}</p>
