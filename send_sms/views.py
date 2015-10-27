@@ -53,7 +53,7 @@ def sendSMS(request):
     username = request.user.username
     device_obj = device.objects.all()
     contact_list = contacts.objects.filter(user=request.user).order_by('firstName')
-    group_list = contactgroup.objects.filter(contact__user=request.user).distinct().order_by('groupName')
+    group_list = list(contactgroup.objects.filter(contact__user=request.user).distinct().order_by('groupName'))
     template_list = msgTemplates.objects.filter(user=request.user).distinct()
     context = {"form": form}
     template = "sendsms.html"
