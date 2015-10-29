@@ -83,3 +83,11 @@ class fourmPost(models.Model):
 
     def __unicode__(self):
         return self.user.username
+
+class fourmResponse(models.Model):
+    user = models.ForeignKey(User)
+    date = models.DateField()
+    message = models.TextField(null=False, blank=False)
+
+    def __unicode__(self):
+        return self.user.username

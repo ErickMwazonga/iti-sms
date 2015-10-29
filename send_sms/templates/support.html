@@ -13,11 +13,14 @@
 <!-- END THIS IS FOR SUCCESS MESSAGES -->
 
 {% block content %}
-    <h4>Portail de Support</h4>
+    <h4>Mes demandes</h4>
     <table class="table table-bordered table-hover table-striped">
         <thead>
         <tr>
-            <th colspan="3">Mes Messages</th>
+            <th>Date</th>
+            <th>Message</th>
+            <th>Statut</th>
+            <th>Numero ID</th>
         </tr>
         </thead>
         <tbody>
@@ -30,6 +33,26 @@
                 {% else %}
                     <td><span class="label label-success">{{ m.statut }}</span></td>
                 {% endif %}
+                <td>ID:{{m.pk}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <h4>Mes Réponses</h4>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Message</th>
+            <th>Numero ID</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for m in response_messages %}
+            <tr>
+                <td>{{ m.date }}</td>
+                <td>{{ m.message }}</td>
+                <td>ID:{{m.pk}}</td>
             </tr>
         {% endfor %}
         </tbody>

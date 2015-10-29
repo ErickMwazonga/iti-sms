@@ -1,3 +1,4 @@
+# -*- coding: utf8 -*- 
 # django
 from pprint import pprint
 import user
@@ -8,6 +9,8 @@ from django.contrib.auth.decorators import login_required, permission_required
 from django.template import RequestContext
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core.mail import send_mail
+from django.utils.html import escape
+
 
 #lib
 import json
@@ -18,11 +21,11 @@ from text_unidecode import unidecode
 
 #local
 from functions import *
-from models import contacts, contactgroup, device, User, msgTemplates, adminUser, message, userType, fourmPost
+from models import contacts, contactgroup, device, User, msgTemplates, adminUser, message, userType, fourmPost, fourmResponse
 from .forms import SendMsgForm, AddContactForm, AddContactToGroupForm, createTemplateForm, SaveMsgForm, fourmPostForm
 
-# Create your views here.
-
+# script for GSM7
+#
 
 
 @login_required
@@ -33,8 +36,9 @@ def sendSMS(request):
     if form.is_valid():
         number = form.cleaned_data['phoneNumber']
         number_list = number.split(",")
-        message = form.cleaned_data['message']
-        message = unidecode(message)
+        message3 = form.cleaned_data['message']
+        message2 = unidecode(message3)
+        message = message2.replace("'", " ")
         deviceID = request.POST.get('deviceID')
         device_obj = device.objects.all()
         for d_obj in device_obj:
@@ -252,6 +256,7 @@ def analytics(request):
 # Dans support forum for Faaa
 @login_required
 def support(request):
+    response_messages = fourmResponse.objects.filter(user=request.user)
     messages = fourmPost.objects.filter(user=request.user)
     form = fourmPostForm(request.POST or None)
     user = request.user

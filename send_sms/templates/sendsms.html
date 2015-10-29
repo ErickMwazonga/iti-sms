@@ -20,7 +20,7 @@
                         {% endfor %}
                     </select><br /><br/>
                 <p>{{ form.message.label }}</p>
-                <textarea type="text" class="form-control" id="id_message" name="message" rows="10" maxlength="300" placeholder="Entrez votre message ou choisissez un template"></textarea>
+                <textarea type="text" class="form-control" id="id_message" name="message" rows="10" maxlength="250" placeholder="Entrez votre message ou choisissez un template"></textarea>
                 <div id="textarea_feedback" style="font-size:14px;color:#999999;"></div>
                 <br />
                </div>
@@ -104,7 +104,7 @@
     </script>
     <script>
         $(document).ready(function() {
-            var text_max = 300;
+            var text_max = 250;
             $('#textarea_feedback').html(text_max + ' restant');
         
             $('#id_message').keyup(function() {

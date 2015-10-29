@@ -83,13 +83,3 @@ class SmsGateway(object):
         return ret_dict
 
 
-if __name__ == "__main__":
-    """Just to make sure that the class works as expected."""
-    email = "test@tester.com"
-    password = ""
-    to = ""
-    msg = ""
-    device = ""
-    gw = SmsGateway(email=email, password=password)
-    print gw.getMessages()['response']
-    #print gw.sendMessageToNumber(number, msg, device)['response']
