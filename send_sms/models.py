@@ -16,7 +16,7 @@ class contacts(models.Model):
 
 class device(models.Model):
     user = models.ForeignKey(User, default=0)
-    deviceID = models.IntegerField(max_length=4)
+    deviceID = models.IntegerField()
     phoneNumber = models.CharField(max_length=8)
     accountEmail = models.CharField(max_length=30)
     accountPassword = models.CharField(max_length=30)
@@ -66,3 +66,20 @@ class adminUser(models.Model):
 
     def __unicode__(self):
         return self.masterUser.username
+
+
+#
+# Dans upgrades
+#
+class fourmPost(models.Model):
+    user = models.ForeignKey(User)
+    date = models.DateField()
+    message = models.TextField(null=False, blank=False)
+    STATUT_CHOICES = (
+        ('Resolu', 'Resolu'),
+        ('En Cours', 'En Cours'),
+    )
+    statut = models.CharField(max_length=11, choices=STATUT_CHOICES, default='En Cours')
+
+    def __unicode__(self):
+        return self.user.username

@@ -7,6 +7,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required, permission_required
 from django.template import RequestContext
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core.mail import send_mail
 
 #lib
 import json
@@ -17,8 +18,8 @@ from text_unidecode import unidecode
 
 #local
 from functions import *
-from models import contacts, contactgroup, device, User, msgTemplates, adminUser, message, userType
-from .forms import SendMsgForm, AddContactForm, AddContactToGroupForm, createTemplateForm, SaveMsgForm
+from models import contacts, contactgroup, device, User, msgTemplates, adminUser, message, userType, fourmPost
+from .forms import SendMsgForm, AddContactForm, AddContactToGroupForm, createTemplateForm, SaveMsgForm, fourmPostForm
 
 # Create your views here.
 
@@ -53,7 +54,7 @@ def sendSMS(request):
     username = request.user.username
     device_obj = device.objects.all()
     contact_list = contacts.objects.filter(user=request.user).order_by('firstName')
-    group_list = list(contactgroup.objects.filter(contact__user=request.user).distinct().order_by('groupName'))
+    group_list = contactgroup.objects.filter(contact__user=request.user).distinct().order_by('groupName')
     template_list = msgTemplates.objects.filter(user=request.user).distinct()
     context = {"form": form}
     template = "sendsms.html"
@@ -246,3 +247,20 @@ def analytics(request):
 # def sandbox(request):
 #     template = "sandbox.html"
 #     return render_to_response(template, locals(), context_instance=RequestContext(request))
+
+
+# Dans support forum for Faaa
+@login_required
+def support(request):
+    messages = fourmPost.objects.filter(user=request.user)
+    form = fourmPostForm(request.POST or None)
+    user = request.user
+    if form.is_valid():
+        save_it = form.save(commit=False)
+        save_it.user = request.user
+        save_it.date = datetime.datetime.today()
+        save_it.statut = 'En Cours'
+        save_it.save()
+        send_mail('Support Ticket ITISMS', 'User:' + user.username + ' . Has posted a support ticket. <a href="http://www.tahiti-sms.com/admin">Respond here</a>', 'noreply@tahiti-sms.com', ['info@itievolution.com'], fail_silently=False)
+        return redirect('/support/')
+    return render_to_response('support.html', locals(), context_instance=RequestContext(request))

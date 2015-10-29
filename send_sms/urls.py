@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     url(r'^template/delete/(?P<templateID>[0-9]+)$', 'send_sms.views.deleteTemplate', name='DeleteTemplate'),
     url(r'^stats/$', 'send_sms.views.usageStats', name='UserStats'),
     url(r'^analytics/$', 'send_sms.views.analytics', name='Analytics'),
-
+    # dans forum system
+    url(r'^support/$', 'send_sms.views.support', name='Support'),
     # url(r'^sandbox/$',  'send_sms.views.sandbox', name='Login'),
 )

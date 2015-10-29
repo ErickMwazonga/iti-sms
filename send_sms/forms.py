@@ -52,3 +52,13 @@ class createTemplateForm(forms.ModelForm):
         super(createTemplateForm, self).__init__(*args, **kwargs)
         self.fields['name'].widget.attrs.update({'class': 'form-control'})
         self.fields['msgText'].widget.attrs.update({'class': 'form-control'})
+        
+
+class fourmPostForm(forms.ModelForm):
+    class Meta:
+        model = fourmPost
+        exclude = ['user', 'date', 'statut']
+
+    def __init__(self, *args, **kwargs):
+        super(fourmPostForm, self).__init__(*args, **kwargs)
+        self.fields['message'].widget.attrs.update({'class': 'form-control'})
