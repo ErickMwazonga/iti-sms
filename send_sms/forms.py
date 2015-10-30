@@ -51,7 +51,7 @@ class createTemplateForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(createTemplateForm, self).__init__(*args, **kwargs)
         self.fields['name'].widget.attrs.update({'class': 'form-control'})
-        self.fields['msgText'].widget.attrs.update({'class': 'form-control'})
+        self.fields['msgText'].widget.attrs.update({'class': 'form-control', 'maxlength': '250'})
         
 
 class fourmPostForm(forms.ModelForm):

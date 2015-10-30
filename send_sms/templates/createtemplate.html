@@ -2,7 +2,10 @@
 {% block content %}
     <form method="POST" action="">
         {% csrf_token %}
-        {{ form.as_p }}
+        <p><label>Nom</label>{{ form.name }}</p>
+        <p><label>Message</label>{{ form.msgText }}</p>
+        <div id="textarea_feedback" style="font-size:14px;color:#999999;"></div>
+        <br />
     	<input type="submit" value="Enregistrer" class="btn btn-primary" />
     	<input type="reset"  value="Effacer" class="btn btn-danger" />
     </form>
@@ -20,4 +23,17 @@
             </tr>
         {% endfor %}
     </table>
+    <script>
+        $(document).ready(function() {
+            var text_max = 250;
+            $('#textarea_feedback').html(text_max + ' restant');
+        
+            $('#id_msgText').keyup(function() {
+                var text_length = $('#id_msgText').val().length;
+                var text_remaining = text_max - text_length;
+        
+                $('#textarea_feedback').html(text_remaining + ' restant');
+            });
+        });
+    </script>
 {% endblock %}
