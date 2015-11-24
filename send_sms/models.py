@@ -45,7 +45,7 @@ class msgTemplates(models.Model):
 
 class message(models.Model):
     user = models.ForeignKey(User)
-    sentTo = models.CharField(max_length=10, null=False, blank=False)
+    sentTo = models.CharField(max_length=50, null=False, blank=False)
     msgText = models.TextField(null=False, blank=False)
 
     def __unicode__(self):
